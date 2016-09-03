@@ -21,5 +21,5 @@ ADD start_nifi.sh /${NIFI_HOME}/
 EXPOSE 8443 8080
 VOLUME ["/opt/datafiles", "/opt/scriptfiles", "/opt/certs", "${NIFI_HOME}/logs, "${NIFI_HOME}/flowfile_repository", "${NIFI_HOME}/content_repository", "${NIFI_HOME}/database_repository", "${NIFI_HOME}/provenance_repository"]
 WORKDIR ${NIFI_HOME}
-RUN chmod +x ./start.sh
+RUN chmod +x ./start_nifi.sh
 CMD ["./start_nifi.sh"]
