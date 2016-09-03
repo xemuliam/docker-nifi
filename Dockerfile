@@ -1,12 +1,15 @@
 FROM alpine
+
 MAINTAINER Viacheslav Kalashnikov <xemuliam@gmail.com>
+
 LABEL VERSION="1.0.0" \
-    RUN="docker run -d -p 8080:8080 xemuliam/docker-nifi"
 
 ENV DIST_MIRROR http://mirror.cc.columbia.edu/pub/software/apache/nifi
 ENV NIFI_HOME /opt/nifi
 ENV VERSION 1.0.0
-
+ENV SSL_ENABLE false
+ENV LDAP_ENABLE false
+ENV INSTANCE_ROLE single-node
 RUN echo "http://dl-4.alpinelinux.org/alpine/v3.4/community/" >> /etc/apk/repositories &&\
   apk update && apk add --upgrade openjdk8 curl && \
   mkdir /opt && \
@@ -16,12 +19,9 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/v3.4/community/" >> /etc/apk/reposi
   mkdir ${NIFI_HOME}/flow && \
   apk del curl && \
   rm -rf /var/cache/apk/*
-
 ADD start_nifi.sh /${NIFI_HOME}/
-
-EXPOSE 443 8080
-VOLUME ["/opt/certs", "${NIFI_HOME}/flowfile_repository", "${NIFI_HOME}/content_repository", "${NIFI_HOME}/database_repository", "${NIFI_HOME}/content_repository", "${NIFI_HOME}/provenance_repository"]
-
+EXPOSE 8443 8080
+VOLUME ["/opt/datafiles", "/opt/scriptfiles", "/opt/certs", "${NIFI_HOME}/logs, "${NIFI_HOME}/flowfile_repository", "${NIFI_HOME}/content_repository", "${NIFI_HOME}/database_repository", "${NIFI_HOME}/provenance_repository"]
 WORKDIR ${NIFI_HOME}
-
+RUN chmod +x ./start.sh
 CMD ["./start_nifi.sh"]

@@ -1,24 +1,47 @@
 #!/bin/sh
 set -e
 
-#setting ports!
-#sed -i "s/nifi.cluster.manager.protocol.port=/nifi.cluster.manager.protocol.port=9000/g" ${NIFI_HOME}/conf/nifi.properties
-#sed -i "s/nifi.cluster.node.protocol.port=/nifi.cluster.node.protocol.port=9001/g" ${NIFI_HOME}/conf/nifi.properties
-#sed -i "s/nifi.cluster.node.unicast.manager.protocol.port=/nifi.cluster.node.unicast.manager.protocol.port=9000/g" ${NIFI_HOME}/conf/nifi.properties
-#sed -i "s/nifi.cluster.node.unicast.manager.address=/nifi.cluster.node.unicast.manager.address=${NIFI_MASTER}/g" ${NIFI_HOME}/conf/nifi.properties
+do_ssl_enable() {
 
-sed -i "s/nifi.web.http.host=/nifi.web.http.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
+#
 
-#password
-sed -i "s/nifi.sensitive.props.key=/nifi.sensitive.props.key=${PASSWORD}/g" ${NIFI_HOME}/conf/nifi.properties
+}
+do_ssl_disable() {
 
-#if [ ! -z "$ISMANAGER" ]; then
-#  sed -i "s/nifi.cluster.is.manager=false/nifi.cluster.is.manager=true/g" ${NIFI_HOME}/conf/nifi.properties
-#  sed -i "s/nifi.cluster.manager.address=/nifi.cluster.manager.address=nifi_master/g" ${NIFI_HOME}/conf/nifi.properties
-#elif [ ! -z "$ISNODE" ]; then
-#  sed -i "s/nifi.cluster.is.node=false/nifi.cluster.is.node=true/g" ${NIFI_HOME}/conf/nifi.properties
-#  sed -i "s/nifi.cluster.node.address=/nifi.cluster.node.address=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
-#fi
+sed -i -e 's|^nifi.security.keystore=.*$|nifi.security.keystore=|' ${NIFI_HOME}/conf/nifi.properties
+sed -i -e 's|^nifi.security.keystoreType=.*$|nifi.security.keystoreType=|' ${NIFI_HOME}/conf/nifi.properties
+sed -i -e 's|^nifi.security.keystorePasswd=.*$|nifi.security.keystorePasswd=|' ${NIFI_HOME}/conf/nifi.properties
+sed -i -e 's|^nifi.security.truststore=.*$|nifi.security.truststore=|' ${NIFI_HOME}/conf/nifi.properties
+sed -i -e 's|^nifi.security.truststoreType=.*$|nifi.security.truststoreType=|' ${NIFI_HOME}/conf/nifi.properties
+sed -i -e 's|^nifi.security.truststorePasswd=.*$|nifi.security.truststorePasswd=|' ${NIFI_HOME}/conf/nifi.properties
 
+}
+do_s2s_configure() {
+
+sed -i "s/nifi\.remote\.input\.socket\.host=/nifi.remote.input.socket.host=${HOSTNAME}/g" $NIFI_HOME/conf/nifi.properties
+sed -i "s/nifi\.remote\.input\.socket\.port=/nifi.remote.input.socket.port=12345/g" $NIFI_HOME/conf/nifi.properties
+sed -i "s/nifi\.remote\.input\.secure=true/nifi.remote.input.secure=false/g" $NIFI_HOME/conf/nifi.properties
+}
+do_cluster_node_configure() {
+
+#
+
+}
+if [[ "$SSL_ENABLE" == "true" ]]; then
+    do_ssl_enable
+else
+    do_ssl_disable
+fi
+
+
+if [ "$INSTANCE_ROLE" == "single-node" ]; then
+  do_s2s_configure
+fi
+
+if [ "$NIFI_INSTANCE_ROLE" == "cluster-node" ]; then
+  do_s2s_configure
+  echo ${HOSTNAME}
+  do_cluster_node_configure
+fi
 tail -F ${NIFI_HOME}/logs/nifi-app.log &
 ${NIFI_HOME}/bin/nifi.sh run
