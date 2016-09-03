@@ -2,8 +2,6 @@ FROM alpine
 
 MAINTAINER Viacheslav Kalashnikov <xemuliam@gmail.com>
 
-LABEL VERSION="1.0.0" \
-
 ENV DIST_MIRROR http://mirror.cc.columbia.edu/pub/software/apache/nifi
 ENV NIFI_HOME /opt/nifi
 ENV VERSION 1.0.0
