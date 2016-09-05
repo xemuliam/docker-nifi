@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sed -i -e "s/nifi\.ui\.banner\.text=/nifi.ui.banner.text=Docker NiFi ${VERSION}/g" ${NIFI_HOME}/conf/nifi.properties
+sed -i -e "s/nifi\.ui\.banner\.text=/nifi.ui.banner.text=$BANNER_TEXT/g" ${NIFI_HOME}/conf/nifi.properties
 do_ssl_enable() {
 
 sed -i -e 's|nifi.web.http.port=.*$|nifi.web.http.port=|' ${NIFI_HOME}/conf/nifi.properties

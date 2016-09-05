@@ -6,6 +6,7 @@ ENV		DIST_MIRROR http://mirror.cc.columbia.edu/pub/software/apache/nifi
 ENV		NIFI_HOME /opt/nifi
 ENV		VERSION 1.0.0
 ENV		SSL_ENABLE false
+ENV		BANNER_TEXT DockerNiFi
 ENV		INSTANCE_ROLE single-node
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/latest-stable/community/" >> /etc/apk/repositories &&\
