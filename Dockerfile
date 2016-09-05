@@ -2,14 +2,13 @@ FROM		alpine
 
 MAINTAINER	Viacheslav Kalashnikov <xemuliam@gmail.com>
 
-ENV			DIST_MIRROR http://mirror.cc.columbia.edu/pub/software/apache/nifi
-ENV			NIFI_HOME /opt/nifi
-ENV			VERSION 1.0.0
-ENV			SSL_ENABLE false
-ENV			LDAP_ENABLE false
-ENV			INSTANCE_ROLE single-node
+ENV		DIST_MIRROR http://mirror.cc.columbia.edu/pub/software/apache/nifi
+ENV		NIFI_HOME /opt/nifi
+ENV		VERSION 1.0.0
+ENV		SSL_ENABLE false
+ENV		INSTANCE_ROLE single-node
 
-RUN echo "http://dl-4.alpinelinux.org/alpine/v3.4/community/" >> /etc/apk/repositories &&\
+RUN echo "http://dl-4.alpinelinux.org/alpine/latest-stable/community/" >> /etc/apk/repositories &&\
 	apk update && apk add --upgrade openjdk8 curl && \
 	mkdir /opt && \
 	curl -s ${DIST_MIRROR}/${VERSION}/nifi-${VERSION}-bin.tar.gz | tar xvz -C /opt  && \
