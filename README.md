@@ -1,5 +1,5 @@
 # docker-nifi
-Docker image for Apache NiFi
+Docker image for Apache NiFi 0.7.0
 
                         ##         .
                   ## ## ##        ==
