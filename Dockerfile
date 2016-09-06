@@ -2,7 +2,7 @@ FROM		alpine
 
 MAINTAINER	Viacheslav Kalashnikov <xemuliam@gmail.com>
 
-ENV		DIST_MIRROR http://mirror.cc.columbia.edu/pub/software/apache/nifi
+ENV		DIST_MIRROR http://archive.apache.org/dist/nifi/
 ENV		NIFI_HOME /opt/nifi
 ENV		VERSION 0.7.0
 ENV		SSL_ENABLE false
