@@ -20,7 +20,7 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/latest-stable/community/" >> /etc/a
 
 ADD start_nifi.sh /${NIFI_HOME}/
 
-EXPOSE 8443 8080
+EXPOSE 8080 8081
 
 VOLUME ["/opt/datafiles","/opt/scriptfiles","/opt/certs", "${NIFI_HOME}/logs","${NIFI_HOME}/flowfile_repository", "${NIFI_HOME}/database_repository", "${NIFI_HOME}/content_repository", "${NIFI_HOME}/provenance_repository"]
 
