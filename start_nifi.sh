@@ -36,9 +36,11 @@ if [ "$NIFI_INSTANCE_ROLE" == "cluster-manager" ]; then
   do_s2s_configure
   do_cluster_manager_configure
 fi
+
 if [ "$NIFI_INSTANCE_ROLE" == "cluster-node" ]; then
   do_s2s_configure
   do_cluster_node_configure
 fi
+
 tail -F ${NIFI_HOME}/logs/nifi-app.log &
 ${NIFI_HOME}/bin/nifi.sh run
