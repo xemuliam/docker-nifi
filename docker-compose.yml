@@ -1,0 +1,29 @@
+version: '2'
+
+networks:
+  default:
+    driver: overlay
+
+services:
+
+  acquisition:
+    image: xemuliam/docker-nifi
+    ports:
+      - 9090:8080
+    environment:
+      NIFI_UI_BANNER_TEXT: 'Acquisition Node'
+      NIFI_INSTANCE_ROLE: 'single-node'
+
+  ncm:
+    image: xemuliam/docker-nifi
+    ports:
+      - 9090:8080
+    environment:
+      NIFI_UI_BANNER_TEXT: 'Processing Cluster'
+      NIFI_INSTANCE_ROLE: 'cluster-manager'
+
+  worker:
+    image: xemuliam/docker-nifi
+    environment:
+      NIFI_UI_BANNER_TEXT: 'Processing Node'
+      NIFI_INSTANCE_ROLE: 'cluster-node'
