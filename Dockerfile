@@ -5,7 +5,6 @@ MAINTAINER	Viacheslav Kalashnikov <xemuliam@gmail.com>
 ENV		DIST_MIRROR http://archive.apache.org/dist/nifi/
 ENV		NIFI_HOME /opt/nifi
 ENV		VERSION 0.7.0
-ENV		SSL_ENABLE false
 ENV		BANNER_TEXT DockerNiFi
 ENV		INSTANCE_ROLE single-node
 
