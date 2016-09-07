@@ -31,12 +31,12 @@ if [ "$INSTANCE_ROLE" == "single-node" ]; then
   do_s2s_configure
 fi
 
-if [ "$NIFI_INSTANCE_ROLE" == "cluster-manager" ]; then
+if [ "$INSTANCE_ROLE" == "cluster-manager" ]; then
   do_s2s_configure
   do_cluster_manager_configure
 fi
 
-if [ "$NIFI_INSTANCE_ROLE" == "cluster-node" ]; then
+if [ "$INSTANCE_ROLE" == "cluster-node" ]; then
   do_s2s_configure
   do_cluster_node_configure
 fi
