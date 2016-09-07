@@ -9,4 +9,3 @@ Docker image for Apache NiFi 0.7.0
            \______ o           __/
              \    \  0.7.0  __/
               \____\_______/
-
