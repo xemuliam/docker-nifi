@@ -21,13 +21,13 @@ splash() {
   echo "*************************************************"
 }
 
-#splash "Creating a Keystore instance"
-#docker-machine create \
-#                -d virtualbox \
-#                --virtualbox-memory 512 \
-#                --virtualbox-cpu-count 1 \
-#                --virtualbox-disk-size 512 \
-#                keystore
+splash "Creating a Keystore instance"
+docker-machine create \
+                -d virtualbox \
+                --virtualbox-memory 512 \
+                --virtualbox-cpu-count 1 \
+                --virtualbox-disk-size 512 \
+                keystore
 
 
 splash "Starting a Consul store"
