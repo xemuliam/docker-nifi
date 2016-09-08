@@ -12,7 +12,7 @@ services:
       - 9091:8080
     environment:
       BANNER_TEXT: 'Acquisition Node'
-      INSTANCE_ROLE: 'single-node'
+      INSTANCE_ROLE: 'simple-node'
 
   ncm:
     image: xemuliam/docker-nifi
