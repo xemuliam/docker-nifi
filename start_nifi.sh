@@ -38,6 +38,7 @@ configure_cluster_manager() {
   sed -i "s/nifi\.cluster\.manager\.protocol\.port=/nifi.cluster.manager.protocol.port=20001/g" $NIFI_HOME/conf/nifi.properties
 }
 
+
 splash
 configure_common
 

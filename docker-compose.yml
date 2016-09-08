@@ -27,3 +27,4 @@ services:
     environment:
       BANNER_TEXT: 'Processing Node'
       INSTANCE_ROLE: 'cluster-node'
+
