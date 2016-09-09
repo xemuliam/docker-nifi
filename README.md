@@ -8,5 +8,5 @@ Docker image for Apache NiFi based on Alpine linux and OpenJDK
            /"""""""""""""""""\___/ ===
       ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
            \______ o   NiFi    __/
-             \    \   0.7.0 __/
+             \    \   1.0.0 __/
               \____\_______/
