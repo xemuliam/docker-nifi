@@ -1,5 +1,2 @@
 FROM xemuliam/docker-nifi:1.0.0
 COPY ./zookeeper.properties /opt/nifi/conf/
-MKDIR /opt/nifi/state
-MKDIR /opt/nifi/state/zookeeper
-ECHO 1 > /opt/nifi/state/zookeeper/myid
