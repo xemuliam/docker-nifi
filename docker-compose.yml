@@ -16,7 +16,8 @@ services:
       INSTANCE_ROLE: 'single-node'
 
   node1:
-    image: xemuliam/docker-nifi
+    build: ./nifi-cluster
+      dockerfile: Dockerfile-node1
     hostname: cluster.node1
     ports:
       - 8080:8080
@@ -27,7 +28,8 @@ services:
       MYID: 1
 
   node2:
-    image: xemuliam/docker-nifi
+    build: ./nifi-cluster
+      dockerfile: Dockerfile-node2
     hostname: cluster.node2
     ports:
       - 8080:8080
@@ -38,7 +40,8 @@ services:
       MYID: 2
 
   node3:
-    image: xemuliam/docker-nifi
+    build: ./nifi-cluster
+      dockerfile: Dockerfile-node3
     hostname: cluster.node3
     ports:
       - 8080:8080
