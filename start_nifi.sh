@@ -26,7 +26,7 @@ do_cluster_node_configure() {
 # MyId zookeeper
   mkdir ${NIFI_HOME}/state
   mkdir ${NIFI_HOME}/state/zookeeper
-  echo ${MYID} > ${NIFI_HOME}/state/zookeeper/myidfi
+  echo ${MYID} > ${NIFI_HOME}/state/zookeeper/myid
 }
 
 
