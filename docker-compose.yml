@@ -8,23 +8,42 @@ services:
 
   acquisition:
     image: xemuliam/docker-nifi
+    hostname: acquisition.node1
     ports:
-      - 9091:8080
+      - 8080:8080
     environment:
       BANNER_TEXT: 'Acquisition Node'
-      INSTANCE_ROLE: 'simple-node'
+      INSTANCE_ROLE: 'single-node'
 
-  ncm:
+  node1:
     image: xemuliam/docker-nifi
+    hostname: cluster.node1
     ports:
-      - 9091:8080
+      - 8080:8080
     environment:
-      BANNER_TEXT: 'Processing Cluster'
-      INSTANCE_ROLE: 'cluster-manager'
-
-  worker:
-    image: xemuliam/docker-nifi
-    environment:
-      BANNER_TEXT: 'Processing Node'
+      BANNER_TEXT: 'Processing Cluster Node 1'
       INSTANCE_ROLE: 'cluster-node'
+      ZOOKEEPER_CONNECT: 'cluster.node1:2181,cluster.node2:2181,cluster.node3:2181'
+      MYID: 1
 
+  node2:
+    image: xemuliam/docker-nifi
+    hostname: cluster.node2
+    ports:
+      - 8080:8080
+    environment:
+      BANNER_TEXT: 'Processing Cluster Node 2'
+      INSTANCE_ROLE: 'cluster-node'
+      ZOOKEEPER_CONNECT: 'cluster.node1:2181,cluster.node2:2181,cluster.node3:2181'
+      MYID: 2
+
+  node3:
+    image: xemuliam/docker-nifi
+    hostname: cluster.node3
+    ports:
+      - 8080:8080
+    environment:
+      BANNER_TEXT: 'Processing Cluster Node 3'
+      INSTANCE_ROLE: 'cluster-node'
+      ZOOKEEPER_CONNECT: 'cluster.node1:2181,cluster.node2:2181,cluster.node3:2181'
+      MYID: 3

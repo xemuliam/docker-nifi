@@ -2,11 +2,13 @@ FROM		alpine
 
 MAINTAINER	Viacheslav Kalashnikov <xemuliam@gmail.com>
 
-ENV		DIST_MIRROR http://archive.apache.org/dist/nifi/
+ENV		DIST_MIRROR http://archive.apache.org/dist/nifi
 ENV		NIFI_HOME /opt/nifi
-ENV		VERSION 0.7.0
-ENV		BANNER_TEXT DockerNiFi
+ENV		VERSION 1.0.0
+ENV		BANNER_TEXT Docker-Nifi
 ENV		INSTANCE_ROLE single-node
+ENV		ZOOKEEPER_CONNECT 
+ENV		MYID 
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/latest-stable/community/" >> /etc/apk/repositories &&\
 	apk update && apk add --upgrade openjdk8 curl && \
@@ -20,7 +22,7 @@ RUN echo "http://dl-4.alpinelinux.org/alpine/latest-stable/community/" >> /etc/a
 
 ADD start_nifi.sh /${NIFI_HOME}/
 
-EXPOSE 8080 8081
+EXPOSE 8080 8081 10001
 
 VOLUME ["/opt/datafiles","/opt/scriptfiles","/opt/certs", "${NIFI_HOME}/logs","${NIFI_HOME}/flowfile_repository", "${NIFI_HOME}/database_repository", "${NIFI_HOME}/content_repository", "${NIFI_HOME}/provenance_repository"]
 
