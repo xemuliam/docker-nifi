@@ -7,7 +7,7 @@ networks:
 services:
 
   acquisition:
-    image: xemuliam/docker-nifi
+    image: xemuliam/docker-nifi:1.0.0
     hostname: acquisition.node1
     ports:
       - 8080:8080
@@ -16,7 +16,8 @@ services:
       INSTANCE_ROLE: 'single-node'
 
   node1:
-    build: ./nifi-cluster
+    build:
+      context: ./nifi-cluster
       dockerfile: Dockerfile-node1
     hostname: cluster.node1
     ports:
@@ -28,7 +29,8 @@ services:
       MYID: 1
 
   node2:
-    build: ./nifi-cluster
+    build:
+      context: ./nifi-cluster
       dockerfile: Dockerfile-node2
     hostname: cluster.node2
     ports:
@@ -40,7 +42,8 @@ services:
       MYID: 2
 
   node3:
-    build: ./nifi-cluster
+    build:
+      context: ./nifi-cluster
       dockerfile: Dockerfile-node3
     hostname: cluster.node3
     ports:
