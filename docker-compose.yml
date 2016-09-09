@@ -10,7 +10,7 @@ services:
     image: xemuliam/docker-nifi:1.0.0
     hostname: acquisition.node1
     ports:
-      - 8080
+      - 9091:8080
     environment:
       BANNER_TEXT: 'Acquisition Node'
       INSTANCE_ROLE: 'single-node'
@@ -21,7 +21,7 @@ services:
       dockerfile: Dockerfile-node1
     hostname: cluster.node1
     ports:
-      - 8080
+      - 9091:8080
     environment:
       BANNER_TEXT: 'Processing Cluster Node 1'
       INSTANCE_ROLE: 'cluster-node'
@@ -34,7 +34,7 @@ services:
       dockerfile: Dockerfile-node2
     hostname: cluster.node2
     ports:
-      - 8080
+      - 9091:8080
     environment:
       BANNER_TEXT: 'Processing Cluster Node 2'
       INSTANCE_ROLE: 'cluster-node'
@@ -47,7 +47,7 @@ services:
       dockerfile: Dockerfile-node3
     hostname: cluster.node3
     ports:
-      - 8080
+      - 9091:8080
     environment:
       BANNER_TEXT: 'Processing Cluster Node 3'
       INSTANCE_ROLE: 'cluster-node'
