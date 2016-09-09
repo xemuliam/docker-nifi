@@ -7,8 +7,8 @@ ENV		NIFI_HOME /opt/nifi
 ENV		VERSION 1.0.0
 ENV		BANNER_TEXT Docker-Nifi
 ENV		INSTANCE_ROLE single-node
-ENV		ZOOKEEPER_CONNECT 
-ENV		MYID 
+ENV		ZOOKEEPER_CONNECT NA
+ENV		MYID NA
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/latest-stable/community/" >> /etc/apk/repositories &&\
 	apk update && apk add --upgrade openjdk8 curl && \
