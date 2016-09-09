@@ -54,8 +54,8 @@ create_host host2
 create_host host3
 create_host host4
 
-splash "Configuring for Swarm"
-eval $(docker-machine env --swarm host1)
+#splash "Configuring for Swarm"
+#eval $(docker-machine env --swarm host1)
 
 # we are creating a default overlay network in docker-compose.yml now
 # splash "Creating overlay networks"
