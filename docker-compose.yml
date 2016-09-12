@@ -6,52 +6,52 @@ networks:
 
 services:
 
-  acquisition:
-    build:
-      context: ./nifi-cluster
-      dockerfile: Dockerfile-acquisition
-    hostname: acquisition.node
-    ports:
-      - 8080
-    environment:
-      BANNER_TEXT: 'Acquisition Node'
-      INSTANCE_ROLE: 'single-node'
+#  acquisition:
+#    build:
+#      context: ./nifi-cluster
+##      dockerfile: Dockerfile-acquisition
+#    hostname: acquisition
+#    ports:
+#      - 8080
+#    environment:
+#      BANNER_TEXT: 'Acquisition Node'
+#      INSTANCE_ROLE: 'single-node'
 
   node1:
     build:
       context: ./nifi-cluster
-      dockerfile: Dockerfile-node1
-    hostname: cluster.node1
+#      dockerfile: Dockerfile-node1
+    hostname: node1
     ports:
       - 8080
     environment:
       BANNER_TEXT: 'Processing Cluster Node 1'
       INSTANCE_ROLE: 'cluster-node'
-      ZOOKEEPER_CONNECT: 'cluster.node1:2181,cluster.node2:2181,cluster.node3:2181'
+      ZOOKEEPER_CONNECT: 'node1:2181,node2:2181,node3:2181'
       MYID: 1
 
   node2:
     build:
       context: ./nifi-cluster
-      dockerfile: Dockerfile-node2
-    hostname: cluster.node2
+#      dockerfile: Dockerfile-node2
+    hostname: node2
     ports:
       - 8080
     environment:
       BANNER_TEXT: 'Processing Cluster Node 2'
       INSTANCE_ROLE: 'cluster-node'
-      ZOOKEEPER_CONNECT: 'cluster.node1:2181,cluster.node2:2181,cluster.node3:2181'
+      ZOOKEEPER_CONNECT: 'node1:2181,node2:2181,node3:2181'
       MYID: 2
 
   node3:
     build:
       context: ./nifi-cluster
-      dockerfile: Dockerfile-node3
-    hostname: cluster.node3
+#      dockerfile: Dockerfile-node3
+    hostname: node3
     ports:
       - 8080
     environment:
       BANNER_TEXT: 'Processing Cluster Node 3'
       INSTANCE_ROLE: 'cluster-node'
-      ZOOKEEPER_CONNECT: 'cluster.node1:2181,cluster.node2:2181,cluster.node3:2181'
+      ZOOKEEPER_CONNECT: 'node1:2181,node2:2181,node3:2181'
       MYID: 3
