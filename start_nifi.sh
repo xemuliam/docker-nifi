@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 do_site2site_configure() {
   sed -i "s/nifi\.ui\.banner\.text=.*/nifi.ui.banner.text=${BANNER_TEXT}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.web\.http\.host=.*/nifi.web.http.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
@@ -22,16 +24,16 @@ do_cluster_node_configure() {
   sed -i "s/nifi\.cluster\.node\.protocol\.port=.*/nifi.cluster.node.protocol.port=33333/g" ${NIFI_HOME}/conf/nifi.properties
 }
 
-if [ "$NIFI_INSTANCE_ROLE" == "single-node" ]; then
+if [ "$INSTANCE_ROLE" == "single-node" ]; then
   do_site2site_configure
 fi
 
-if [ "$NIFI_INSTANCE_ROLE" == "cluster-manager" ]; then
+if [ "$INSTANCE_ROLE" == "cluster-manager" ]; then
   do_site2site_configure
   do_cluster_manager_configure
 fi
 
-if [ "$NIFI_INSTANCE_ROLE" == "cluster-node" ]; then
+if [ "$INSTANCE_ROLE" == "cluster-node" ]; then
   do_site2site_configure
   do_cluster_node_configure
 fi
