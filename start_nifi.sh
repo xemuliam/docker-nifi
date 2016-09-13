@@ -12,7 +12,7 @@ do_site2site_configure() {
 
 do_cluster_manager_configure() {
   sed -i "s/nifi\.cluster\.is\.manager=false/nifi.cluster.is.manager=true/g" ${NIFI_HOME}/conf/nifi.properties
-  sed -i "s/nifi\.cluster\.manager\.address=.*/nifi.cluster.manager.address=ncm/g" ${NIFI_HOME}/conf/nifi.properties
+  sed -i "s/nifi\.cluster\.manager\.address=.*/nifi.cluster.manager.address=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.cluster\.manager\.protocol\.port=.*/nifi.cluster.manager.protocol.port=22222/g" ${NIFI_HOME}/conf/nifi.properties
 }
 
