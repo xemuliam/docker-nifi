@@ -4,7 +4,7 @@ set -e
 
 do_site2site_configure() {
   sed -i "s/nifi\.ui\.banner\.text=.*/nifi.ui.banner.text=${BANNER_TEXT}/g" ${NIFI_HOME}/conf/nifi.properties
-  sed -i "s/nifi\.web\.http\.host=.*/nifi.web.http.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
+#  sed -i "s/nifi\.web\.http\.host=.*/nifi.web.http.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.remote\.input\.socket\.host=.*/nifi.remote.input.socket.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.remote\.input\.socket\.port=.*/nifi.remote.input.socket.port=11111/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.remote\.input\.secure=true/nifi.remote.input.secure=false/g" ${NIFI_HOME}/conf/nifi.properties
