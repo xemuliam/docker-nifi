@@ -22,13 +22,6 @@ do_cluster_node_configure() {
   sed -i "s/nifi\.cluster\.node\.protocol\.port=.*/nifi.cluster.node.protocol.port=33333/g" ${NIFI_HOME}/conf/nifi.properties
 }
 
-
-splash
-configure_common
-
-# we don't configure acquisition node to serve site-to-site requests,
-# the node initiates push/pull only
-
 if [ "$NIFI_INSTANCE_ROLE" == "single-node" ]; then
   do_site2site_configure
 fi
