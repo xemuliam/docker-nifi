@@ -1,4 +1,4 @@
-FROM		centos
+FROM		centos:centos7
 
 MAINTAINER	Viacheslav Kalashnikov <xemuliam@gmail.com>
 
@@ -7,8 +7,6 @@ ENV		NIFI_HOME /opt/nifi
 ENV		VERSION 0.7.0
 ENV		BANNER_TEXT Docker-Nifi-0.7.0
 ENV		INSTANCE_ROLE single-node
-ENV		NODES_LIST NA
-ENV		MYID NA
 
 RUN yum update -y &&\
   yum install -y java-1.8.0-openjdk-devel tar && \
