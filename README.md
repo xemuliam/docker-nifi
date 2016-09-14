@@ -22,14 +22,11 @@ Deployment options:
 
 
 # Known issues
-Despite recommendations in NiFi System Administrator’s Guide assingning IP 0.0.0.0 to all cluster members won't work.
+Despite recommendations in NiFi System Administrator’s Guide, assigning IP 0.0.0.0 to all cluster members won't work.
 
 So NCM has no assigned IP (in this case 0.0.0.0 will be assigned to NCM automatically).
 
-However for cluster node can't set to 0.0.0.0, as this address is then sent verbatim to NCM, which, in turn does not resolve it back to the node. If it's set to the ${HOSTNAME}, the cluster works, but the node's web ui is not accessible on the external network.
-
-
-Site to site communication between cluster and any other node is impossible.
+However for cluster node can't set to 0.0.0.0, as this address is then sent verbatim to NCM, which, in turn does not resolve it back to the node. If it's set to the ${HOSTNAME}, the cluster works, but the node's web ui is not accessible on the external network, so site to site communication between cluster and any other node is impossible.
 
 
 # Docker Networking
