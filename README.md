@@ -39,7 +39,7 @@ Additional information about Docker overlay networking: https://github.com/docke
 # Pre-Requisites
 Ensure the following pre-requisites are met (due to some blocker bugs in earlier versions). As of today, the latest Docker Toolbox and Homebrew are fine.
 
-# Pre-Requisites
+
 - Docker 1.10+
 - Docker Compose 1.6.1+
 - Docker Machine 0.6.0+
