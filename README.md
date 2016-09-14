@@ -3,7 +3,7 @@ Docker image for Apache NiFi 0.7.0 based on CentOs 7 and OpenJDK 8
 
                       ##          .
                   ## ## ##        ==
-               ## ## ## ## ##    ===
+               ## ## ## ## ##     ===
            /"""""""""""""""""\____/ ===
       ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~~ /  ===- ~~~
            \______ o   NiFi     __/
@@ -85,7 +85,7 @@ or
 # Where's my UI?
 If you are running `docker-compose` in a foreground, open a new terminal and execute these commands:
 ```
-$> eval $(docker-machine env --swarm host1)`
+$> eval $(docker-machine env --swarm host1)
 $> docker-compose ps
 ```
 Now you can see all containers with status and bind ports. Use ip and port in your web-browser.
@@ -94,8 +94,7 @@ Now you can see all containers with status and bind ports. Use ip and port in yo
 # Flex the Cluster
 Change the number of processing nodes in a cluster (`worker` is the worker node service name from our `docker-compose.yml`):
 ```
-$>  docker-compose scale worker=2
+$> docker-compose scale worker=2
 $> docker-compose ps
 ```
-Now go to the NCM host and click on the `Cluster` menu item on the right. New nodes will appear shortly after registering with the
-manager.
+Now go to the NCM host and click on the `Cluster` menu item on the right. New nodes will appear shortly after registering with the manager.
