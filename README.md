@@ -21,6 +21,17 @@ Deployment options:
 - NiFi worker nodes can be scaled up and down via a standard `docker-compose scale worker=N` command, e.g. `worker=2` after standard multi-host deployment will create second worker node on different Docker network host (if available) and connct this new node to existing NiFi cluster.
 
 
+# Known issues
+Despite recommendations in NiFi System Administrator’s Guide assingning IP 0.0.0.0 to all cluster members won't work.
+
+So NCM has no assigned IP (in this case 0.0.0.0 will be assigned to NCM automatically).
+
+However for cluster node can't set to 0.0.0.0, as this address is then sent verbatim to NCM, which, in turn does not resolve it back to the node. If it's set to the ${HOSTNAME}, the cluster works, but the node's web ui is not accessible on the external network.
+
+
+Site to site communication between cluster and any other node is impossible.
+
+
 # Docker Networking
 Creating an overlay network in advance is **no longer required**.
 
@@ -87,7 +98,7 @@ Now you can see all containers with status and bind ports. Use ip and port in yo
 Change the number of processing nodes in a cluster (`worker` is the worker node service name from our `docker-compose.yml`):
 ```
 $>  docker-compose scale worker=2
-$> docker-compose ps`
+$> docker-compose ps
 ```
 Now go to the NCM host and click on the `Cluster` menu item on the right. New nodes will appear shortly after registering with the
 manager.
