@@ -55,6 +55,7 @@ Run the `create_vms.sh` in the root folder to create required set of virtual mac
 
 # Pull images on every host
 To ensure smooth operations of `docker-compose` it is recommended to cache a container image on every node:
+
 `docker-compose pull`
 
 # Start the containers
