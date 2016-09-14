@@ -39,7 +39,6 @@ Additional information about Docker overlay networking: https://github.com/docke
 # Pre-Requisites
 Ensure the following pre-requisites are met (due to some blocker bugs in earlier versions). As of today, the latest Docker Toolbox and Homebrew are fine.
 
-
 - Docker 1.10+
 - Docker Compose 1.6.1+
 - Docker Machine 0.6.0+
@@ -60,7 +59,9 @@ To ensure smooth operations of `docker-compose` it is recommended to cache a con
 
 # Start the containers
 `docker-compose up` for forground (interactive) mode
+
 or
+
 `docker-compose up -d` for background (detached) mode
 
 # Where's my UI?
@@ -69,12 +70,12 @@ If you are running `docker-compose` in a foreground, open a new terminal and exe
 $> eval $(docker-machine env --swarm host1)`
 $> docker-compose ps
 ```
-Now you can see all containers with status and bind ports.
+Now you can see all containers with status and bind ports. Use ip and port in your web-browser.
 
 # Flex the Cluster
 Change the number of processing nodes in a cluster (`worker` is the worker node service name from our `docker-compose.yml`):
 ```
-&>  docker-compose scale worker=2
+$>  docker-compose scale worker=2
 $> docker-compose ps`
 ```
 Now go to the NCM host and click on the `Cluster` menu item on the right. New nodes will appear shortly after registering with the
