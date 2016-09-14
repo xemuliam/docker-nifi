@@ -71,7 +71,7 @@ Now you can see all containers with status and bind ports.
 
 # Flex the Cluster
 Change the number of processing nodes in a cluster (`worker` is the worker node service name from our `docker-compose.yml`):
-`♨ >  docker-compose scale worker=2`
-`♨> docker-compose ps`
+`♨ >  docker-compose scale worker=2
+♨> docker-compose ps`
 Now go to the NCM host and click on the `Cluster` menu item on the right. New nodes will appear shortly after registering with the
 manager.
