@@ -65,8 +65,10 @@ or
 
 # Where's my UI?
 If you are running `docker-compose` in a foreground, open a new terminal and execute these commands:
-`♨> eval $(docker-machine env --swarm host1)`
-`♨> docker-compose ps`
+```
+$> eval $(docker-machine env --swarm host1)`
+$> docker-compose ps
+```
 Now you can see all containers with status and bind ports.
 
 # Flex the Cluster
