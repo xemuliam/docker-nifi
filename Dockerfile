@@ -1,4 +1,4 @@
-FROM		centos
+FROM		centos:centos7
 
 MAINTAINER	Viacheslav Kalashnikov <xemuliam@gmail.com>
 
