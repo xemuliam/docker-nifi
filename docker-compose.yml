@@ -7,7 +7,7 @@ networks:
 services:
 
   acquisition:
-    image: xemuliam/docker-nifi
+    image: xemuliam/docker-nifi:0.7.0
     ports:
       - 9999:8080
     environment:
@@ -15,7 +15,7 @@ services:
       INSTANCE_ROLE: 'simple-node'
 
   ncm:
-    image: xemuliam/docker-nifi
+    image: xemuliam/docker-nifi:0.7.0
     ports:
       - 9999:8080
     environment:
@@ -23,7 +23,7 @@ services:
       INSTANCE_ROLE: 'cluster-manager'
 
   worker:
-    image: xemuliam/docker-nifi
+    image: xemuliam/docker-nifi:0.7.0
     environment:
       BANNER_TEXT: 'Processing Node'
       INSTANCE_ROLE: 'cluster-node'
