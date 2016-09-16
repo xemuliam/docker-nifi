@@ -11,7 +11,7 @@ services:
     ports:
       - 9999:8080
     environment:
-      BANNER_TEXT: 'Acquisition Node'{$NODE_INSTANCE_ID}
+      BANNER_TEXT: 'Acquisition Node'{$ACQUISITION_INSTANCE_ID}
       INSTANCE_ROLE: 'simple-node'
 
 #  node:
