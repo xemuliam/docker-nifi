@@ -11,15 +11,15 @@ services:
     ports:
       - 9999:8080
     environment:
-      BANNER_TEXT: 'Acquisition Node'
+      BANNER_TEXT: 'Acquisition Node'{$NODE_INSTANCE_ID}
       INSTANCE_ROLE: 'simple-node'
 
-  node:
-    image: xemuliam/docker-nifi:1.0.0
-    ports:
-      - 9999:8080
-    environment:
-      BANNER_TEXT: 'Processing Cluster Node'{$NODE_INSTANCE_ID}
-      INSTANCE_ROLE: 'cluster-node'
-      NODES_LIST: 'node1:2181,node2:2181,node3:2181'
-      MYID: {$NODE_INSTANCE_ID}
+#  node:
+#    image: xemuliam/docker-nifi:1.0.0
+#    ports:
+#      - 9999:8080
+#    environment:
+#      BANNER_TEXT: 'Processing Cluster Node'{$NODE_INSTANCE_ID}
+#      INSTANCE_ROLE: 'cluster-node'
+#      NODES_LIST: 'node1:2181,node2:2181,node3:2181'
+#      MYID: {$NODE_INSTANCE_ID}
