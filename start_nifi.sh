@@ -4,7 +4,7 @@ set -e
 
 do_site2site_configure() {
   sed -i "s/nifi\.ui\.banner\.text=.*/nifi.ui.banner.text=${BANNER_TEXT}/g" ${NIFI_HOME}/conf/nifi.properties
-  sed -i "s/nifi\.remote\.input\.host=.*/nifi.remote.input.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
+#  sed -i "s/nifi\.remote\.input\.host=.*/nifi.remote.input.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.remote\.input\.socket\.port=.*/nifi.remote.input.socket.port=11111/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.remote\.input\.secure=true/nifi.remote.input.secure=false/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.web\.http\.host=.*/nifi.web.http.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
@@ -25,18 +25,16 @@ do_cluster_node_configure() {
 # MyId zookeeper
   mkdir -p ${NIFI_HOME}/state/zookeeper
   echo ${MYID} > ${NIFI_HOME}/state/zookeeper/myid
+
+# Zookeeper properties
+  sed -i "/^server\.1=/q" ${NIFI_HOME}/conf/zookeeper.properties; sed -i "s/^server\.1=.*/server.1=/g" ${NIFI_HOME}/conf/zookeeper.properties
 }
 
-
-if [ "$INSTANCE_ROLE" == "single-node" ]; then
-  do_site2site_configure
-fi
+do_site2site_configure
 
 if [ "$INSTANCE_ROLE" == "cluster-node" ]; then
-  do_site2site_configure
   do_cluster_node_configure
 fi
-
 
 tail -F ${NIFI_HOME}/logs/nifi-app.log &
 ${NIFI_HOME}/bin/nifi.sh run
