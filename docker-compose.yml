@@ -4,17 +4,15 @@ networks:
   default:
     driver: overlay
 
-
 services:
 
   acquisition:
-    build: ./nifi-cluster
-    hostname: acquisition
+    image: xemuliam/docker-nifi:1.0.0
     ports:
-      - 8080
+      - 9999:8080
     environment:
       BANNER_TEXT: 'Acquisition Node'
-      INSTANCE_ROLE: 'single-node'
+      INSTANCE_ROLE: 'simple-node'
 
   node1:
     build: ./nifi-cluster
