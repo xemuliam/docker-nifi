@@ -2,7 +2,7 @@
 Docker image for Apache NiFi based on CentOs and OpenJDK
 
 
-                      ##          .
+                      ##           .
                   ## ## ##         ==
                ## ## ## ## ##     ===
            /"""""""""""""""""\____/ ===
@@ -10,3 +10,5 @@ Docker image for Apache NiFi based on CentOs and OpenJDK
            \______ o   NiFi     __/
              \    \   1.0.0  __/
               \____\________/
+
+http://cwiki.apache.org/confluence/display/NIFI/Migration+Guidance
