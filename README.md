@@ -1,5 +1,5 @@
 # docker-nifi ![](https://images.microbadger.com/badges/version/xemuliam/docker-nifi:1.0.0.svg) ![](https://images.microbadger.com/badges/image/xemuliam/docker-nifi:1.0.0.svg)
-Docker image for Apache NiFi based on CentOs and OpenJDK
+[Docker](https://www.docker.com/what-docker) image for [Apache NiFi](https://nifi.apache.org/) based on CentOs and OpenJDK
 
 
                       ##           .
@@ -24,8 +24,7 @@ Deployment options:
 
 # Migration from 0.7.0
 
-All required information acn be found here:
-http://cwiki.apache.org/confluence/display/NIFI/Migration+Guidance
+All required information can be found [here](http://cwiki.apache.org/confluence/display/NIFI/Migration+Guidance)
 
 
 # Known issues
@@ -44,29 +43,33 @@ Additional information about Docker overlay networking: https://github.com/docke
 
 
 # Ports
+
 - 11111 - site to site communication port
 - 33333 - cluster node protocol port
 - 9999 - NiFi web application port
 
 
 # Exposed ports
+
 - 8080 - web http port
 - 8081 - port for web-based processors
 - 10000 - additional port for external applications
 
-== Official Apache NiFi Documentation and Guides
 
-- https://nifi.apache.org/docs.html[Overview]
-- https://nifi.apache.org/docs/nifi-docs/html/user-guide.html[User Guide]
-- https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html[Expression Language]
-- https://nifi.apache.org/quickstart.html[Development Quickstart]
-- https://nifi.apache.org/developer-guide.html[Developer's Guide]
-- https://nifi.apache.org/docs/nifi-docs/html/administration-guide.html[System Administrator]
+# Official Apache NiFi Documentation and Guides
+
+- [Overview](https://nifi.apache.org/docs.html)
+- [User Guide](https://nifi.apache.org/docs/nifi-docs/html/user-guide.html)
+- [Expression Language](https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html)
+- [Development Quickstart](https://nifi.apache.org/quickstart.html)
+- [Developer's Guide](https://nifi.apache.org/developer-guide.html)
+- [System Administrator](https://nifi.apache.org/docs/nifi-docs/html/administration-guide.html)
 
 
 # ListenHTTP Processor
 
 The standard library has a built-in processor for an HTTP endpoint listener. That processor is named [ListenHTTP](https://nifi.apache.org/docs/nifi-docs/components/org.apache.nifi.processors.standard.ListenHTTP/index.html). You should set the *Listening Port* of the instantiated processor to `8081` if you follow the instructions from above.
+
 
 # Usage
 
