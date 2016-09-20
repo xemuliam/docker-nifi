@@ -39,7 +39,7 @@ Unable to flex cluster by using `docker-compose scale` command. Implementation o
 # Docker Networking
 Creating an overlay network in advance is **no longer required**.
 
-Additional information about Docker overlay networking: https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md
+Additional information about Docker overlay networking is [here](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md)
 
 
 # Ports
@@ -85,6 +85,15 @@ Ensure the following pre-requisites are met (due to some blocker bugs in earlier
 - Docker Swarm 1.1+
 
 (all downloadable as a single Docker Toolbox package as well)
+
+
+# Example
+
+To try out NiFi on Docker:
+
+1. Start Kitematic (from Docker Toolbox set)
+2. Enter `xemuliam` in serach box
+3. Click `Create` button
 
 
 # Automated Environment bootstrap
