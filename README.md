@@ -1,4 +1,4 @@
-# docker-nifi ![](https://images.microbadger.com/badges/image/xemuliam/docker-nifi:0.7.0.svg) ![](https://images.microbadger.com/badges/image/xemuliam/docker-nifi:0.7.0.svg)
+# docker-nifi ![](https://images.microbadger.com/badges/version/xemuliam/docker-nifi:0.7.0.svg) ![](https://images.microbadger.com/badges/image/xemuliam/docker-nifi:0.7.0.svg)
 Docker image for Apache NiFi 0.7.0 based on CentOs 7 and OpenJDK 8
 
                       ##          .
