@@ -53,6 +53,7 @@ docker-machine create \
 create_host host2
 create_host host3
 create_host host4
+create_host host5
 
 splash "Configuring for Swarm"
 eval $(docker-machine env --swarm host1)
