@@ -19,7 +19,8 @@ RUN yum update -y &&\
   mkdir ${NIFI_HOME}/flow && \
   yum clean all
 
-ADD start_nifi.sh /${NIFI_HOME}/
+COPY start_nifi.sh /${NIFI_HOME}/
+COPY zookeeper.properties /${NIFI_HOME}/conf/
 
 EXPOSE 8080 8081 10001
 
