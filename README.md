@@ -66,7 +66,7 @@ Additional information about Docker overlay networking: https://github.com/docke
 
 # ListenHTTP Processor
 
-The standard library has a built-in processor for an HTTP endpoint listener. That processor is named ![ListenHTTP]https://nifi.apache.org/docs/nifi-docs/components/org.apache.nifi.processors.standard.ListenHTTP/index.html. You should set the *Listening Port* of the instantiated processor to `8081` if you follow the instructions from above.
+The standard library has a built-in processor for an HTTP endpoint listener. That processor is named [ListenHTTP](https://nifi.apache.org/docs/nifi-docs/components/org.apache.nifi.processors.standard.ListenHTTP/index.html). You should set the *Listening Port* of the instantiated processor to `8081` if you follow the instructions from above.
 
 # Usage
 
