@@ -32,7 +32,7 @@ However for cluster node can't set to 0.0.0.0, as this address is then sent verb
 # Docker Networking
 Creating an overlay network in advance is **no longer required**.
 
-Additional information about Docker overlay networking: https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md
+Additional information about Docker overlay networking is [here](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md)
 
 
 # Ports
@@ -48,6 +48,26 @@ Additional information about Docker overlay networking: https://github.com/docke
 - 10000 - additional port for external applications
 
 
+# Official Apache NiFi Documentation and Guides
+
+- [Overview](https://nifi.apache.org/docs.html)
+- [User Guide](https://nifi.apache.org/docs/nifi-docs/html/user-guide.html)
+- [Expression Language](https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html)
+- [Development Quickstart](https://nifi.apache.org/quickstart.html)
+- [Developer's Guide](https://nifi.apache.org/developer-guide.html)
+- [System Administrator](https://nifi.apache.org/docs/nifi-docs/html/administration-guide.html)
+
+
+# ListenHTTP Processor
+
+The standard library has a built-in processor for an HTTP endpoint listener. That processor is named [ListenHTTP](https://nifi.apache.org/docs/nifi-docs/components/org.apache.nifi.processors.standard.ListenHTTP/index.html). You should set the *Listening Port* of the instantiated processor to `8081` if you follow the instructions from above.
+
+
+# Usage
+
+This image can either be used as a base image for building on top of NiFi or just to experiment with. I personally have not attempted to use this in a production use case.
+
+
 # Pre-Requisites
 Ensure the following pre-requisites are met (due to some blocker bugs in earlier versions). As of today, the latest Docker Toolbox and Homebrew are fine.
 
@@ -57,6 +77,15 @@ Ensure the following pre-requisites are met (due to some blocker bugs in earlier
 - Docker Swarm 1.1+
 
 (all downloadable as a single Docker Toolbox package as well)
+
+
+# Example
+
+To try out NiFi on Docker:
+
+1. Start Kitematic (from Docker Toolbox set)
+2. Enter `xemuliam` in serach box
+3. Click `Create` button
 
 
 # Automated Environment bootstrap
