@@ -1,15 +1,16 @@
-# docker-nifi ![](https://images.microbadger.com/badges/version/xemuliam/docker-nifi:1.0.0.svg) ![](https://images.microbadger.com/badges/image/xemuliam/docker-nifi:1.0.0.svg)
-[Docker](https://www.docker.com/what-docker) image for [Apache NiFi](https://nifi.apache.org/) based on CentOs and OpenJDK
+# NiFi ![](https://images.microbadger.com/badges/version/xemuliam/nifi:1.0.0.svg) ![](https://images.microbadger.com/badges/image/xemuliam/nifi:1.0.0.svg)
+[Docker](https://www.docker.com/what-docker) image for [Apache NiFi](https://nifi.apache.org/)
+Created on top of [base image](https://hub.docker.com/r/xemuliam/nifi-base) to minimize traffic and deployment time in case of changes should be applied on top of NiFi
 
 
-                      ##           .
-                  ## ## ##         ==
-               ## ## ## ## ##     ===
-           /"""""""""""""""""\____/ ===
-      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~~ /  ===- ~~~
-           \______ o   NiFi     __/
-             \    \   1.0.0  __/
-              \____\________/
+                    ##         .
+              ## ## ##        ==
+           ## ## ## ## ##    ===
+       /"""""""""""""""""\___/ ===
+  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
+       \______ o   NiFi    __/
+         \    \   1.0.0 __/
+          \____\_______/
 
 
 # Overview
