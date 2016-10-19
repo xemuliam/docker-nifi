@@ -5,7 +5,7 @@ LABEL      VERSION="1.0.0" \
 ENV        BANNER_TEXT=Docker-Nifi-1.0.0 \
            INSTANCE_ROLE=single-node \
            NODES_LIST=localhost:2181,localhost:2182,localhost:2183 \
-           MYID=N/A
+           MYID=1
 COPY       start_nifi.sh /${NIFI_HOME}/
 COPY       zookeeper.properties /${NIFI_HOME}/conf/
 VOLUME     /opt/datafiles \
