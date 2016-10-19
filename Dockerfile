@@ -1,7 +1,6 @@
 FROM       xemuliam/nifi-base
 MAINTAINER Viacheslav Kalashnikov <xemuliam@gmail.com>
-ENV        NIFI_HOME=/opt/nifi \
-           BANNER_TEXT=Docker-Nifi-1.0.0 \
+ENV        BANNER_TEXT=Docker-Nifi-1.0.0 \
            INSTANCE_ROLE=single-node \
            NODES_LIST=N/A \
            MYID=N/A
