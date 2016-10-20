@@ -13,7 +13,7 @@ do_cluster_node_configure() {
   sed -i "s/nifi\.cluster\.is\.node=false/nifi.cluster.is.node=true/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.cluster\.node\.protocol\.port=.*/nifi.cluster.node.protocol.port=1020${MYID}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.zookeeper\.connect\.string=.*/nifi.zookeeper.connect.string=${ZK_NODES_LIST}/g" ${NIFI_HOME}/conf/nifi.properties
-  if ["$USE_EMBEDDED_ZK" == "true"] then
+  if ["$USE_EMBEDDED_ZK" == "true"]; then
     sed -i "s/nifi\.state\.management\.embedded\.zookeeper\.start=false/nifi.state.management.embedded.zookeeper.start=true/g" ${NIFI_HOME}/conf/nifi.properties
   else 
     sed -i "s/nifi\.state\.management\.embedded\.zookeeper\.start=true/nifi.state.management.embedded.zookeeper.start=false/g" ${NIFI_HOME}/conf/nifi.properties
@@ -32,7 +32,7 @@ do_cluster_node_configure() {
 
 do_site2site_configure
 
-if ["$INSTANCE_ROLE" == "cluster-node"] then
+if ["$INSTANCE_ROLE" == "cluster-node"]; then
   do_cluster_node_configure
 fi
 
