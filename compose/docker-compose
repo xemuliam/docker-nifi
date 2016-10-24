@@ -4,20 +4,33 @@ services:
 
   node1:
     image: xemuliam/nifi
+    build: .
     ports:
-      - 8081:8080
+      - 8080
     environment:
       INSTANCE_ROLE: 'cluster-node'
       USE_EMBEDDED_ZK: 'true'
-      ZK_NODES_LIST: 'node1:2181'
+      ZK_NODES_LIST: 'node1:2181,node2:2181,node3:2181'
       MYID: 1
 
   node2:
     image: xemuliam/nifi
+    build: .
     ports:
-      - 8082:8080
+      - 8080
     environment:
       INSTANCE_ROLE: 'cluster-node'
-      USE_EMBEDDED_ZK: 'false'
-      ZK_NODES_LIST: 'node1:2181'
+      USE_EMBEDDED_ZK: 'true'
+      ZK_NODES_LIST: 'node1:2181,node2:2181,node3:2181'
       MYID: 2
+
+  node3:
+    image: xemuliam/nifi
+    build: .
+    ports:
+      - 8080
+    environment:
+      INSTANCE_ROLE: 'cluster-node'
+      USE_EMBEDDED_ZK: 'true'
+      ZK_NODES_LIST: 'node1:2181,node2:2181,node3:2181'
+      MYID: 3
