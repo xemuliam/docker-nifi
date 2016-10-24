@@ -7,7 +7,6 @@ ENV        INSTANCE_ROLE=single-node \
            ZK_NODES_LIST=N/A \
            MYID=N/A
 COPY       start_nifi.sh /${NIFI_HOME}/
-COPY       zookeeper.properties /${NIFI_HOME}/conf/
 VOLUME     /opt/datafiles \
            /opt/scriptfiles \
            /opt/certs
