@@ -31,7 +31,7 @@ do_cluster_node_configure() {
 # MyId zookeeper
   if [ "$USE_EMBEDDED_ZK" == "true" ]; then
     mkdir -p ${NIFI_HOME}/state/zookeeper
-    echo ${MYID} > ${NIFI_HOME}/state/zookeeper/myid
+    echo ${ZK_MYID} > ${NIFI_HOME}/state/zookeeper/myid
   fi
 
 # Zookeeper properties
