@@ -35,7 +35,7 @@ services:
     environment:
       INSTANCE_ROLE: 'cluster-node'
       USE_EMBEDDED_ZK: 'true'
-      ZK_NODES_LIST: 'node1, node-2 ,  node_3'
+      ZK_NODES_LIST: 'node1, node-2 , ,   node_3'
       ZK_MYID: 3
       ZK_CLIENT_PORT: 2181
       ZK_INTERCOM_PORT: 2888
