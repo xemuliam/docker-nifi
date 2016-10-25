@@ -10,10 +10,13 @@ services:
     environment:
       INSTANCE_ROLE: 'cluster-node'
       USE_EMBEDDED_ZK: 'true'
-      ZK_NODES_LIST: 'node1:2181,node2:2181,node3:2181'
-      MYID: 1
+      ZK_NODES_LIST: 'node1,node-2,node_3'
+      ZK_MYID: 1
+      ZK_CLIENT_PORT: 2181
+      ZK_INTERCOM_PORT: 2888
+      ZK_ELECTION_PORT: 3888
 
-  node2:
+  node-2:
     image: xemuliam/nifi
     build: .
     ports:
@@ -21,10 +24,13 @@ services:
     environment:
       INSTANCE_ROLE: 'cluster-node'
       USE_EMBEDDED_ZK: 'true'
-      ZK_NODES_LIST: 'node1:2181,node2:2181,node3:2181'
-      MYID: 2
+      ZK_NODES_LIST: 'node1 node-2 node_3'
+      ZK_MYID: 2
+      ZK_CLIENT_PORT: 2181
+      ZK_INTERCOM_PORT: 2888
+      ZK_ELECTION_PORT: 3888
 
-  node3:
+  node_3:
     image: xemuliam/nifi
     build: .
     ports:
@@ -32,5 +38,8 @@ services:
     environment:
       INSTANCE_ROLE: 'cluster-node'
       USE_EMBEDDED_ZK: 'true'
-      ZK_NODES_LIST: 'node1:2181,node2:2181,node3:2181'
-      MYID: 3
+      ZK_NODES_LIST: 'node1, node-2 ,  node_3'
+      ZK_MYID: 3
+      ZK_CLIENT_PORT: 2181
+      ZK_INTERCOM_PORT: 2888
+      ZK_ELECTION_PORT: 3888
