@@ -11,12 +11,9 @@ do_site2site_configure() {
 do_cluster_node_configure() {
   ZK_NODES=$(echo ${ZK_NODES_LIST} | sed -e "s/\s/,/g" -e "s/\(,\)*/\1/g")
 
-  if [ ! -z "$ZK_CLIENT_PORT" ]; then
-    ZK_CONNECT_STRING=$(echo $ZK_NODES | sed -e "s/,/:${ZK_CLIENT_PORT},/g" -e "s/$/:${ZK_CLIENT_PORT}/g")
-    sed -i "s/clientPort=.*/clientPort=${ZK_CLIENT_PORT}/g" ${NIFI_HOME}/conf/zookeeper.properties
-  else
-    ZK_CONNECT_STRING=$(echo $ZK_NODES | sed -e "s/,/:2181,/g" -e "s/$/:2181/g")
-  fi
+  if [ ! -z "$ZK_CLIENT_PORT" ]; then ZK_CLIENT_PORT=2181; fi
+  ZK_CONNECT_STRING=$(echo $ZK_NODES | sed -e "s/,/:${ZK_CLIENT_PORT},/g" -e "s/$/:${ZK_CLIENT_PORT}/g")
+  sed -i "s/clientPort=.*/clientPort=${ZK_CLIENT_PORT}/g" ${NIFI_HOME}/conf/zookeeper.properties
 
   sed -i "s/nifi\.web\.http\.host=.*/nifi.web.http.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.cluster\.protocol\.is\.secure=true/nifi.cluster.protocol.is.secure=false/g" ${NIFI_HOME}/conf/nifi.properties
@@ -36,8 +33,8 @@ do_cluster_node_configure() {
     sed -i "s/nifi\.state\.management\.embedded\.zookeeper\.start=true/nifi.state.management.embedded.zookeeper.start=false/g" ${NIFI_HOME}/conf/nifi.properties
   fi
 
-  if [ -z "$ZK_INTERCOM_PORT" ]; then ZK_INTERCOM_PORT=2888 fi
-  if [ -z "$ZK_ELECTION_PORT" ]; then ZK_ELECTION_PORT=3888 fi
+  if [ -z "$ZK_INTERCOM_PORT" ]; then ZK_INTERCOM_PORT=2888; fi
+  if [ -z "$ZK_ELECTION_PORT" ]; then ZK_ELECTION_PORT=3888; fi
   sed -i "/^server\./,$ d" ${NIFI_HOME}/conf/zookeeper.properties
   srv=1; IFS=","; for node in $ZK_NODES; do sed -i "\$aserver.$srv=$node:${ZK_INTERCOM_PORT}:${ZK_ELECTION_PORT}" ${NIFI_HOME}/conf/zookeeper.properties; let "srv+=1"; done
 }
