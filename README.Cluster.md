@@ -14,8 +14,24 @@ Creating an overlay network in advance is **no longer required**.
 Additional information about Docker overlay networking is [here](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md)
 
 
+# Additional image environment properties
+
+To add more flexibility in configuration there are some environment variables have been added to the image.  
+All of them are hidden however can be used in `docker-compose`.  
+
+- S2S_PORT - NiFi Site-to-site communication port. If empty, default value will be used: 2881
+- IS_CLUSTER_NODE - If _**not**_ empty, NiFi instance will be treated as part of NiFi cluster
+- NODE_PROTOCOL_PORT - NiFi cluster nodes intercommunication port. If empty, default value will be used: 2882
+- ZK_NODES_LIST - List of Zookeeper nodes divided by commas or spaces. Can contain list of NiFi nodes or external Zookeeper nodes. If empty, cluster will not work (see above "Zero master clustering paradigm")
+- ZK_CLIENT_PORT - Port for Zookeeper client. If empty, default value will be used: 2181
+- ZK_MYID - ID of embedded Zookeper node and switch on embedded Zookeper starting when NiFi starts. If empty, embedded Zookeper will not start
+- ZK_MONITOR_PORT - Port for Zookeeper monitoring of NiFi nodes' availability. If empty, default value will be used: 2888
+- ZK_ELECTION_PORT - Port for Zookeeper election of NiFi Cluster Coordinator node. If empty, default value will be used: 3888
+
 
 # Single-Host cluster
+
+## TBD
 
 
 # Multi-Host cluster
