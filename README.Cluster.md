@@ -1,3 +1,20 @@
+# Zero-master clustering paradigm
+
+There are two significant changes in comparison with 0.x version:
+- There is no longer a NiFi Cluster Manager (NCM)
+- Cluster will now auto elect a Cluster Coordinator to oversee the cluster
+
+Useful arcticle can be found [here](http://hortonworks.com/blog/apache-nifi-1-0-0-zero-master-clustering).
+
+
+# Docker Networking
+
+Creating an overlay network in advance is **no longer required**.
+
+Additional information about Docker overlay networking is [here](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md)
+
+
+
 # Single-Host cluster
 
 
