@@ -21,9 +21,10 @@ DockerHub does not caching image layers. Thus creation of base image (with pure 
 
 # Overview
 
-Dockerized and parametrized single- and multi-host NiFi.  
-Scalability is supported.  
-**SSL implementation _sholud be the next step_**.
+&#x1F535;Dockerized and parametrized single- and multi-host NiFi.  
+&#x1F535;Scalability is supported.  
+&#x1F534;SSL implementation sholud be the next step.
+
 
 Deployment options:
 - Standalone NiFi node (by default built directly from image)
