@@ -31,6 +31,11 @@ All of them are hidden however can be used in `docker-compose`.
 - ZK_ELECTION_PORT - Port for Zookeeper election of NiFi Cluster Coordinator node. If empty, default value will be used: 3888
 
 
+# Docker compose reference
+
+To get all official information about docker compose please go to [Docker documentation](http://docs.docker.com/compose/).
+
+
 # Single-Host cluster
 
 NiFi Cluster within one docker-machine. Can be runned and observed from Kitematic.
@@ -108,7 +113,7 @@ Additional information about Docker overlay networking is [here](https://github.
 
 ## Automated Environment bootstrap
 
-Go to your checkout directory.
+Go to directory with YML-files.
 Run the `create_vms.sh` in the root folder to create required set of virtual machines.
 
 
