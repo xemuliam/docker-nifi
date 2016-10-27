@@ -36,10 +36,10 @@ do_cluster_node_configure() {
     sed -i "s/nifi\.state\.management\.embedded\.zookeeper\.start=true/nifi.state.management.embedded.zookeeper.start=false/g" ${NIFI_HOME}/conf/nifi.properties
   fi
 
-  if [ -z "$ZK_NODE_CHECK_PORT" ]; then ZK_NODE_CHECK_PORT=2888; fi
+  if [ -z "$ZK_MONITOR_PORT" ]; then ZK_MONITOR_PORT=2888; fi
   if [ -z "$ZK_ELECTION_PORT" ]; then ZK_ELECTION_PORT=3888; fi
   sed -i "/^server\./,$ d" ${NIFI_HOME}/conf/zookeeper.properties
-  srv=1; IFS=","; for node in $ZK_NODES; do sed -i "\$aserver.$srv=$node:${ZK_NODE_CHECK_PORT}:${ZK_ELECTION_PORT}" ${NIFI_HOME}/conf/zookeeper.properties; let "srv+=1"; done
+  srv=1; IFS=","; for node in $ZK_NODES; do sed -i "\$aserver.$srv=$node:${ZK_MONITOR_PORT}:${ZK_ELECTION_PORT}" ${NIFI_HOME}/conf/zookeeper.properties; let "srv+=1"; done
 }
 
 do_site2site_configure
