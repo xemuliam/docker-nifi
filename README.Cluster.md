@@ -7,6 +7,12 @@ There are two significant changes in comparison with 0.x version:
 Useful arcticle can be found [here](http://hortonworks.com/blog/apache-nifi-1-0-0-zero-master-clustering).
 
 
+# Zookeeper limitations
+
+Zookeeper is included in NiFi libs. So it is not required to use external Zookeper server/cluster to be able to build NiFi cluster.
+However plese bear in mind that Zookeeper cluster can work only in _flat_ configuration without scaling. Thus if you want to build NiFi cluster with embedded Zookeeper you should forget about scaling of NiFi nodes with embedded Zookeeper. **Only nodes _without_ embedded Zookeeper can be scaled up and down**. 
+
+
 # Docker Networking
 
 Creating an overlay network in advance is **no longer required**.
