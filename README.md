@@ -5,7 +5,7 @@ Created from NiFi [base image](https://hub.docker.com/r/xemuliam/nifi-base) to m
 
 # Why base image is required?
 
-Docker Hub does not caching image layers yet. Thus creation of base image (with pure NiFi) mitigates this issue and let us to experiment with NiFi settings w/o downloading full NiFi archive (more than 800MB) each time when we change smth. in settings.
+DockerHub does not caching image layers. Thus creation of base image (with pure NiFi) mitigates this issue and let us to experiment with NiFi settings w/o downloading full NiFi archive (more than 800MB) each time when we change smth. in settings.
 
                         ##         .
                   ## ## ##        ==
@@ -106,35 +106,9 @@ Kitematic will assign all ports and you'll be able to run HDF web-interface dire
 4. Use IP from previous step in address bar of your favorite browser, e.g. `http://192.168.99.100:8080/nifi`
 
 
-# Automated Environment bootstrap
-Go to your checkout directory.
-Run the `create_vms.sh` in the root folder to create required set of virtual machines.
+# How to use NiFi in cluster mode
 
+Please read explanation.
 
-# Attaching console session to swarm master
-`eval $(docker-machine env --swarm host1)`
-
-
-# Pull images on every host
-To ensure smooth operations of `docker-compose` it is recommended to cache a container image on every node:
-
-`docker-compose pull`
-
-
-# Start the containers
-`docker-compose up` for forground (interactive) mode
-
-or
-
-`docker-compose up -d` for background (detached) mode
-
-
-# Where's my UI?
-If you are running `docker-compose` in a foreground, open a new terminal and execute these commands:
-```
-$> eval $(docker-machine env --swarm host1)
-$> docker-compose ps
-```
-Now you can see all containers with status and bind ports. Use ip and port in your web-browser.
 
 # Enjoy! :)
