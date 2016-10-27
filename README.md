@@ -36,13 +36,6 @@ Deployment options:
 All required information can be found [here](http://cwiki.apache.org/confluence/display/NIFI/Migration+Guidance)
 
 
-## Docker Networking
-
-Creating an overlay network in advance is **no longer required**.
-
-Additional information about Docker overlay networking is [here](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md)
-
-
 ## Ports
 
 - 2881 - NiFi site to site communication port
