@@ -7,7 +7,7 @@ Created from NiFi [base image](https://hub.docker.com/r/xemuliam/nifi-base) to m
 
 ## Why base image is required?
 
-DockerHub does not caching image layers. Thus creation of base image (with pure NiFi) mitigates this issue and let us to experiment with NiFi settings w/o downloading full NiFi archive (more than 800MB) each time when we change smth. in settings.
+DockerHub does not caching image layers. Thus creation of base image (with pure NiFi) mitigates this issue and let us to experiment with NiFi settings w/o downloading full NiFi archive (more than 800MB) each time when we change smth. Only our changes will be pulled out from Docker Hub.
 
                         ##         .
                   ## ## ##        ==
