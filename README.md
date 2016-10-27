@@ -27,8 +27,8 @@ SSL implementation sholud be the next step.
 
 Deployment options:
 - Standalone NiFi node (by default built directly from image)
-- Single-host NiFi cluster (within sigle docker-machine) with 
-- Multi-host NiFi cluster
+- Single-host NiFi cluster (within sigle docker-machine) 
+- Multi-host NiFi cluster (within several physical hosts and/or several docker-machines)
 
 
 ## Migration from 0.7.0
