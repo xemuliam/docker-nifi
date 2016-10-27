@@ -53,6 +53,23 @@ All required information can be found [here](http://cwiki.apache.org/confluence/
 - 8081 - NiFi ListenHTTP processor port
 
 
+## Volumes
+
+All below volumes can be mounted to docker host machine folders instead to be easily maintained 
+
+NiFi-specific:
+/opt/nifi/logs
+/opt/nifi/flowfile_repository
+/opt/nifi/database_repository
+/opt/nifi/content_repository
+/opt/nifi/provenance_repository
+
+User-specific:
+/opt/datafiles
+/opt/scriptfiles
+/opt/certs
+
+
 ## Official Apache NiFi Documentation and Guides
 
 - [Overview](https://nifi.apache.org/docs.html)
