@@ -9,15 +9,18 @@ Useful arcticle can be found [here](http://hortonworks.com/blog/apache-nifi-1-0-
 
 # Zookeeper limitations
 
-Zookeeper is included in NiFi libs. So it is not required to use external Zookeper server/cluster to be able to build NiFi cluster.
-However plese bear in mind that Zookeeper cluster can work only in _flat_ configuration without scaling. Thus if you want to build NiFi cluster with embedded Zookeeper you should forget about scaling of NiFi nodes with embedded Zookeeper. **Only nodes _without_ embedded Zookeeper can be scaled up and down**. 
+Zookeeper is included in NiFi libs. So it is **not required** to use external Zookeper server/cluster to be able to build NiFi cluster.
+
+However please bear in mind that Zookeeper cluster can work only in _flat_ configuration without scaling. Thus if you want to build NiFi cluster with embedded Zookeeper you should forget about scaling of NiFi nodes with embedded Zookeeper.
+
+**Only nodes _without_ embedded Zookeeper can be scaled up and down**. 
 
 
 # Docker Networking
 
 Creating an overlay network in advance is **no longer required**.
 
-Additional information about Docker overlay networking is [here](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md)
+Additional information about Docker overlay networking is [here](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md).
 
 
 # Additional image environment properties
@@ -37,7 +40,14 @@ All of them are hidden however can be used in `docker-compose`.
 
 # Single-Host cluster
 
-## TBD
+NiFi Cluster within one docker-machine
+
+
+## Simplest cluster
+
+Contents:
+- One NiFi node with embedded Zookeeper
+- One NiFi node with ability to scale up and down
 
 
 # Multi-Host cluster
