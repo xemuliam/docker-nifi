@@ -37,7 +37,7 @@ Deployment options:
 All required information can be found [here](http://cwiki.apache.org/confluence/display/NIFI/Migration+Guidance)
 
 
-## Ports
+## Used ports (all of them are configurable)
 
 - 2881 - NiFi site to site communication port
 - 2882 - NiFi cluster node protocol port
