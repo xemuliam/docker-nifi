@@ -22,6 +22,7 @@ DockerHub does not caching image layers while compilation. Thus creation of base
 # Overview
 
 &#x1F535; Dockerized and parametrized single- and multi-host NiFi.  
+&#x1F535; Site-to-site communication is switched on.  
 &#x1F535; Scalability is supported.  
 &#x1F534; SSL implementation sholud be the next step.
 
