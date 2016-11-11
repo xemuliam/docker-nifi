@@ -43,7 +43,7 @@ To be able to play with all of below options you should increase amount of memor
 ## Preliminary steps
 
 - Pull image from DockerHub `docker pull xemuliam/nifi`
-- Download and store in place accessible from docker-machine zipped [nifi-cluster](http://minhaskamal.github.io/DownGit/#/home?url=http://github.com/xemuliam/docker-nifi/tree/1.0.0/nifi-cluster) folder
+- Download and store in place accessible from docker-machine zipped [nifi-cluster](http://minhaskamal.github.io/DownGit/#/home?url=http://github.com/xemuliam/docker-nifi/tree/1.x/nifi-cluster) folder
 - Unpack content from downloaded zip
 - Run docker client
 - Go to directory with extracted YML-files
