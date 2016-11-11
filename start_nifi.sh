@@ -42,6 +42,7 @@ do_cluster_node_configure() {
   srv=1; IFS=","; for node in $ZK_NODES; do sed -i "\$aserver.$srv=$node:${ZK_MONITOR_PORT}:${ZK_ELECTION_PORT}" ${NIFI_HOME}/conf/zookeeper.properties; let "srv+=1"; done
 }
 
+sed -i "s/nifi\.ui\.banner\.text=.*/nifi.ui.banner.text=${BANNER_TEXT}/g" ${NIFI_HOME}/conf/nifi.properties
 do_site2site_configure
 
 if [ ! -z "$IS_CLUSTER_NODE" ]; then
