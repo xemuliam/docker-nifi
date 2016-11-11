@@ -70,6 +70,14 @@ User-specific:
 - /opt/certs
 
 
+## Additional environment properties
+
+To add more flexibility in configuration there are some environment variables have been added to the image.  
+
+- BANNER_TEXT - NiFi instance banner text to be able to recognize instance from first look
+- S2S_PORT - NiFi Site-to-site communication port. If empty, default value will be used: 2881
+
+
 ## Official Apache NiFi Documentation and Guides
 
 - [Overview](https://nifi.apache.org/docs.html)
