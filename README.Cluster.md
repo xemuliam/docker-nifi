@@ -16,12 +16,11 @@ However please bear in mind that Zookeeper cluster can work only in _flat_ confi
 **Only nodes _without_ embedded Zookeeper can be scaled up and down**. 
 
 
-# Additional cluster-related image environment properties
+# Additional cluster-related environment properties
 
 To add more flexibility in configuration there are some environment variables have been added to the image.  
 All of them are hidden however can be used in `docker-compose`.  
 
-- S2S_PORT - NiFi Site-to-site communication port. If empty, default value will be used: 2881
 - IS_CLUSTER_NODE - If _**not**_ empty, NiFi instance will be treated as part of NiFi cluster
 - NODE_PROTOCOL_PORT - NiFi cluster nodes intercommunication port. If empty, default value will be used: 2882
 - ZK_NODES_LIST - List of Zookeeper nodes divided by commas or spaces. Can contain list of NiFi nodes or external Zookeeper nodes. If empty, cluster will not work (see above "Zero master clustering paradigm")
