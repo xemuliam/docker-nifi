@@ -16,7 +16,7 @@ However please bear in mind that Zookeeper cluster can work only in _flat_ confi
 **Only nodes _without_ embedded Zookeeper can be scaled up and down**. 
 
 
-# Additional image environment properties
+# Additional cluster-related image environment properties
 
 To add more flexibility in configuration there are some environment variables have been added to the image.  
 All of them are hidden however can be used in `docker-compose`.  
