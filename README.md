@@ -129,7 +129,7 @@ Kitematic will assign all ports and you'll be able to run NiFi web-interface dir
 
 ## How to use NiFi in cluster mode
 
-Please read [explanation](https://github.com/xemuliam/docker-nifi/blob/1.0.0/README.Cluster.md).
+Please read [explanation](https://github.com/xemuliam/docker-nifi/blob/1.x/README.Cluster.md).
 
 
 # Enjoy! :)
