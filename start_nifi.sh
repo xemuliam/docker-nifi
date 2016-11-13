@@ -4,7 +4,7 @@ set -e
 
 do_site2site_configure() {
   if [ -z "$S2S_PORT" ]; then S2S_PORT=2881; fi
-  sed -i "s/nifi\.remote\.input\.host=.*/nifi.remote.input.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
+  sed -i "s/nifi\.remote\.input\.socket\.host=.*/nifi.remote.input.socket.host=${HOSTNAME}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.remote\.input\.socket\.port=.*/nifi.remote.input.socket.port=${S2S_PORT}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.remote\.input\.secure=true/nifi.remote.input.secure=false/g" ${NIFI_HOME}/conf/nifi.properties
 }
