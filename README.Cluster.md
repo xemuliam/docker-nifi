@@ -22,12 +22,12 @@ To add more flexibility in configuration there are some environment variables ha
 All of them are hidden however can be used in `docker-compose`.  
 
 - IS_CLUSTER_NODE - If _**not**_ empty, NiFi instance will be treated as part of NiFi cluster
-- NODE_PROTOCOL_PORT - NiFi cluster nodes intercommunication port. If empty, default value will be used: 2882
+- NODE_PROTOCOL_PORT - NiFi cluster nodes intercommunication port. If empty, following value will be used: 2882
 - ZK_NODES_LIST - List of Zookeeper nodes divided by commas or spaces. Can contain list of NiFi nodes or external Zookeeper nodes. If empty, cluster will not work (see above "Zero master clustering paradigm")
-- ZK_CLIENT_PORT - Port for Zookeeper client. If empty, default value will be used: 2181
-- ZK_MYID - ID of embedded Zookeper node and switch on embedded Zookeper starting when NiFi starts. If empty, embedded Zookeper will not start
-- ZK_MONITOR_PORT - Port for Zookeeper monitoring of NiFi nodes' availability. If empty, default value will be used: 2888
-- ZK_ELECTION_PORT - Port for Zookeeper election of NiFi Cluster Coordinator node. If empty, default value will be used: 3888
+- ZK_CLIENT_PORT - Port for Zookeeper client. If empty, following value will be used: 2181
+- ZK_MYID - ID of embedded Zookeper node and switching on embedded Zookeper starting when NiFi starts. If empty, embedded Zookeper will not start with NiFi
+- ZK_MONITOR_PORT - Port for Zookeeper monitoring of NiFi nodes' availability. If empty, following value will be used: 2888
+- ZK_ELECTION_PORT - Port for Zookeeper election of NiFi Cluster Coordinator node. If empty, following value will be used: 3888
 
 
 # Docker compose reference
@@ -47,7 +47,7 @@ To be able to play with all of below options you should increase amount of memor
 - Unpack content from downloaded zip
 - Run docker client
 - Go to directory with extracted YML-files
-- Ensure your copy of docker image is up to date by pulling image again. If smth. has been changed in image - latest version willl be downloaded
+- Ensure your copy of docker image is up to date by pulling image again. If smth. has been changed in image since last pull, latest image version willl be downloaded
 
 ## Minimal cluster
 
@@ -76,7 +76,7 @@ You can play with this options in very similar way as playing with previous. Ple
 
 Only one exception is unavailability of scaling nodes with Zookeeper.
 
-As additional playing procedure you can inspect YML file more tightly to learn how to work with image parameters.
+As additional playing procedure you can inspect YML file more tightly to learn how to work with image parameters. Also please pay attention on ZK_NODES_LIST declaration on different nodes.
 
 And certainly you can add scaling capabilities to this option by addition next section in YML-file:
 ```
@@ -108,7 +108,7 @@ This option is very similar to "Single-host Basic", however each NiFi node will 
 
 Creating an overlay network in advance is **no longer required**.
 
-Additional information about Docker overlay networking is [here](https://github.com/docker/docker/blob/master/docs/userguide/networking/get-started-overlay.md).
+Additional information about Docker overlay networking is [here](https://docs.docker.com/engine/userguide/networking/get-started-overlay/).
 
 ## Automated Environment bootstrap
 
