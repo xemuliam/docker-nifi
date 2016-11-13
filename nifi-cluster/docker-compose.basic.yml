@@ -7,11 +7,13 @@ services:
     ports:
       - 8080
     environment:
-      IS_MANAGERER_NODE: true
+      IS_CLUSTER_MANAGER: 'true'
 
   node:
     image: xemuliam/nifi:0.7.1
     ports:
       - 8080
     environment:
-      IS_CLUSTER_NODE: yes
+      IS_CLUSTER_NODE: 0
+      NCM: ncm
+      depends_on: ncm
