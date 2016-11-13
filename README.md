@@ -33,7 +33,7 @@ Deployment options:
 - Multi-host NiFi cluster (within several physical hosts and/or several docker-machines)
 
 
-## Migration from 0.7.0
+## Migration from 0.x version
 
 All required information can be found [here](http://cwiki.apache.org/confluence/display/NIFI/Migration+Guidance)
 
@@ -75,12 +75,13 @@ User-specific:
 
 To add more flexibility in configuration there are some environment variables have been added to the image.  
 
-- BANNER_TEXT - NiFi instance banner text to be able to recognize instance from first look
-- S2S_PORT - NiFi Site-to-site communication port. If empty, default value will be used: 2881
+- BANNER_TEXT - NiFi instance banner text to be able to easily recognize instance from first look on UI
+- S2S_PORT - NiFi Site-to-site communication port. If empty, following value will be used: 2881
 
 
 ## Official Apache NiFi Documentation and Guides
 
+- [Wiki](https://cwiki.apache.org/confluence/display/NIFI/Apache+NiFi)
 - [Overview](https://nifi.apache.org/docs.html)
 - [User Guide](https://nifi.apache.org/docs/nifi-docs/html/user-guide.html)
 - [Expression Language](https://nifi.apache.org/docs/nifi-docs/html/expression-language-guide.html)
