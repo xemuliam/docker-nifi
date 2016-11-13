@@ -29,7 +29,7 @@ do_cluster_node_configure() {
 
   sed -i "s/nifi\.cluster\.node\.unicast\.manager\.address=.*/nifi.cluster.node.unicast.manager.address=${NCM}/g" ${NIFI_HOME}/conf/nifi.properties
   if [ -z "$MANAGER_PROTOCOL_PORT" ]; then MANAGER_PROTOCOL_PORT=2883; fi
-  sed -i "s/nifi\.cluster\.node\.unicast\.manager\.protocol\.port=.*/nifi.cluster.node.unicast.manager.protocol.port=${$MANAGER_PROTOCOL_PORT}/g" ${NIFI_HOME}/conf/nifi.properties
+  sed -i "s/nifi\.cluster\.node\.unicast\.manager\.protocol\.port=.*/nifi.cluster.node.unicast.manager.protocol.port=${MANAGER_PROTOCOL_PORT}/g" ${NIFI_HOME}/conf/nifi.properties
 }
 
 sed -i "s/nifi\.ui\.banner\.text=.*/nifi.ui.banner.text=${BANNER_TEXT}/g" ${NIFI_HOME}/conf/nifi.properties
