@@ -1,3 +1,5 @@
+![](https://gcn.com/articles/2014/12/01/~/media/GIG/GCN/Redesign/Articles/2014/December/nifi.png)
+
 # NiFi
 - ![](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.1.svg) ![](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.1.svg)
 - ![](https://images.microbadger.com/badges/version/xemuliam/nifi:1.0.0.svg) ![](https://images.microbadger.com/badges/image/xemuliam/nifi:1.0.0.svg)
