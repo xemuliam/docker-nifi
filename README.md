@@ -43,6 +43,7 @@ All required information can be found [here](http://cwiki.apache.org/confluence/
 
 ## Used ports (all of them are configurable)
 
+- 2883 - *_0.x only_* NiFi Cluster Manager/unicast manager protocol port
 - 2881 - NiFi site to site communication port
 - 2882 - NiFi cluster node protocol port
 - 2181 - Zookeeper client port
