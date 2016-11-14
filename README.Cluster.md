@@ -1,3 +1,5 @@
+All below information is related to 1.x NiFi version
+
 # Zero-master clustering paradigm
 
 There are two significant changes in comparison with 0.x version:
