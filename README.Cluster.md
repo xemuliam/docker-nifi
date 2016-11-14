@@ -25,6 +25,7 @@ All of them are hidden however can be used in `docker-compose`.
 - NODE_PROTOCOL_PORT - NiFi cluster nodes intercommunication port. If empty, following value will be used: 2882
 - ZK_NODES_LIST - List of Zookeeper nodes divided by commas or spaces. Can contain list of NiFi nodes or external Zookeeper nodes. If empty, cluster will not work (see above "Zero master clustering paradigm")
 - ZK_CLIENT_PORT - Port for Zookeeper client. If empty, following value will be used: 2181
+- ZK_ROOT_NODE - This is important to set correctly, as which cluster the NiFi instance attempts to join is determined by which ZooKeeper instance it connects to and the ZooKeeper Root Node that is specified. If empty, following value will be used: /root
 - ZK_MYID - ID of embedded Zookeper node and switching on embedded Zookeper starting when NiFi starts. If empty, embedded Zookeper will not start with NiFi
 - ZK_MONITOR_PORT - Port for Zookeeper monitoring of NiFi nodes' availability. If empty, following value will be used: 2888
 - ZK_ELECTION_PORT - Port for Zookeeper election of NiFi Cluster Coordinator node. If empty, following value will be used: 3888
