@@ -25,6 +25,9 @@ do_cluster_node_configure() {
   sed -i "s/nifi\.cluster\.node\.protocol\.port=.*/nifi.cluster.node.protocol.port=${NODE_PROTOCOL_PORT}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.zookeeper\.connect\.string=.*/nifi.zookeeper.connect.string=$ZK_CONNECT_STRING/g" ${NIFI_HOME}/conf/nifi.properties
 
+  if [ -z "$ZK_ROOT_NODE" ]; then ZK_ROOT_NODE="/root"; fi
+  sed -i "s/nifi\.zookeeper\.root\.node=.*/nifi.zookeeper.root.node=$ZK_ROOT_NODE/g" ${NIFI_HOME}/conf/nifi.properties
+
   sed -i "s/<property name=\"Connect String\">.*</<property name=\"Connect String\">$ZK_CONNECT_STRING</g" ${NIFI_HOME}/conf/state-management.xml
  
   if [ ! -z "$ZK_MYID" ]; then
