@@ -25,18 +25,13 @@ do_cluster_node_configure() {
   sed -i "s/nifi\.cluster\.node\.protocol\.port=.*/nifi.cluster.node.protocol.port=${NODE_PROTOCOL_PORT}/g" ${NIFI_HOME}/conf/nifi.properties
   sed -i "s/nifi\.zookeeper\.connect\.string=.*/nifi.zookeeper.connect.string=$ZK_CONNECT_STRING/g" ${NIFI_HOME}/conf/nifi.properties
 
-  if [ -z "$ZK_ROOT_NODE" ]; then ZK_ROOT_NODE="/root"; fi
-  sed -i "s/nifi\.zookeeper\.root\.node=.*/nifi.zookeeper.root.node=$ZK_ROOT_NODE/g" ${NIFI_HOME}/conf/nifi.properties
-
+  if [ -z "$ZK_ROOT_NODE" ]; then sed -i "s/nifi\.zookeeper\.root\.node=.*/nifi.zookeeper.root.node=$ZK_ROOT_NODE/g" ${NIFI_HOME}/conf/nifi.properties; fi
   sed -i "s/<property name=\"Connect String\">.*</<property name=\"Connect String\">$ZK_CONNECT_STRING</g" ${NIFI_HOME}/conf/state-management.xml
  
   if [ ! -z "$ZK_MYID" ]; then
     sed -i "s/nifi\.state\.management\.embedded\.zookeeper\.start=false/nifi.state.management.embedded.zookeeper.start=true/g" ${NIFI_HOME}/conf/nifi.properties
-
     mkdir -p ${NIFI_HOME}/state/zookeeper
     echo ${ZK_MYID} > ${NIFI_HOME}/state/zookeeper/myid
-  else 
-    sed -i "s/nifi\.state\.management\.embedded\.zookeeper\.start=true/nifi.state.management.embedded.zookeeper.start=false/g" ${NIFI_HOME}/conf/nifi.properties
   fi
 
   if [ -z "$ZK_MONITOR_PORT" ]; then ZK_MONITOR_PORT=2888; fi
@@ -48,9 +43,7 @@ do_cluster_node_configure() {
 sed -i "s/nifi\.ui\.banner\.text=.*/nifi.ui.banner.text=${BANNER_TEXT}/g" ${NIFI_HOME}/conf/nifi.properties
 do_site2site_configure
 
-if [ ! -z "$IS_CLUSTER_NODE" ]; then
-  do_cluster_node_configure
-fi
+if [ ! -z "$IS_CLUSTER_NODE" ]; then do_cluster_node_configure; fi
 
 tail -F ${NIFI_HOME}/logs/nifi-app.log &
 ${NIFI_HOME}/bin/nifi.sh run
