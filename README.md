@@ -1,4 +1,4 @@
-![](https://gcn.com/articles/2014/12/01/~/media/GIG/GCN/Redesign/Articles/2014/December/nifi.png)
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Apache-nifi-logo.svg/640px-Apache-nifi-logo.svg.png)
 
 # NiFi
 - ![](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.1.svg) ![](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.1.svg)
