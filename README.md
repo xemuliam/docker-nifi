@@ -1,4 +1,4 @@
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRz5cTiKFkhC1G5qYVB8vid4Zvnm58srHqzMkJ42IRXC9j7fiZ0)
+![](nifi-logo-uni-500.png)
 
 # NiFi
 - ![](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.1.svg) ![](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.1.svg)
