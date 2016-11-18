@@ -1,4 +1,4 @@
-![](nifi-logo-uni-500.png)
+![](https://drive.google.com/file/d/0B8-qd_mSdC6BMGI4SlFFZVJQOWs/view?usp=sharing)
 
 # NiFi
 - ![](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.1.svg) ![](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.1.svg)
