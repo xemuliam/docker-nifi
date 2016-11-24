@@ -1,12 +1,15 @@
 [![nifi-logo-uni-500.png](https://s15.postimg.org/sfsfqg45n/nifi_logo_uni_500.png)](https://postimg.org/image/lckkatypz/)
 
+
 # NiFi
-- ![](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.1.svg) ![](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.1.svg)
-- ![](https://images.microbadger.com/badges/version/xemuliam/nifi:1.0.0.svg) ![](https://images.microbadger.com/badges/image/xemuliam/nifi:1.0.0.svg)
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.1.svg)
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.0.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.0.0.svg)
 
 
 [Docker](https://www.docker.com/what-docker) image for [Apache NiFi](https://nifi.apache.org/).
 
+![Docker Pulls](https://img.shields.io/docker/pulls/xemuliam/nifi.svg) ![Docker Stars](https://img.shields.io/docker/stars/xemuliam/nifi.svg)
+ 
 Created from NiFi [base image](https://hub.docker.com/r/xemuliam/nifi-base) to minimize traffic and deployment time in case of changes should be applied on top of NiFi
 
 
