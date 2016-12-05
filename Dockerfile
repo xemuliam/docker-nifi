@@ -1,4 +1,4 @@
-FROM       xemuliam/nifi-base
+FROM       xemuliam/nifi-base:1.1.0
 MAINTAINER Viacheslav Kalashnikov <xemuliam@gmail.com>
 ENV        BANNER_TEXT="" \
            S2S_PORT=""
