@@ -1,4 +1,5 @@
 All below information is related to 1.x NiFi version
+To get information about prevoius cluster implementation please read [this document](https://github.com/xemuliam/docker-nifi/blob/main/README.Cluster.Old.md)
 
 # Zero-master clustering paradigm
 
