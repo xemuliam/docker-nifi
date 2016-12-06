@@ -9,4 +9,3 @@ VOLUME     /opt/datafiles \
 WORKDIR    ${NIFI_HOME}
 RUN        chmod +x ./start_nifi.sh
 CMD        ./start_nifi.sh
-ww
