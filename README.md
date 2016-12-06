@@ -23,8 +23,8 @@ DockerHub does not cache image layers while compilation. Thus creation of base i
                ## ## ## ## ##    ===
            /"""""""""""""""""\___/ ===
       ~~~ {~~ ~~~~ ~~~ ~~~~ ~~~ ~ /  ===- ~~~
-           \______ o   NiFi    __/
-             \    \   1.1.0 __/
+           \______ o           __/
+             \    \         __/
               \____\_______/
 
 *__Please use corresponding branches from this repo to play with code.__*
