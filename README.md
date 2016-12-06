@@ -27,6 +27,7 @@ DockerHub does not cache image layers while compilation. Thus creation of base i
              \    \   1.1.0 __/
               \____\_______/
 
+*__Please use corresponding branches from this repo to play with code.__*
 
 # Overview
 
@@ -140,7 +141,7 @@ Kitematic will assign all ports and you'll be able to run NiFi web-interface dir
 
 ## How to use NiFi in cluster mode
 
-Please read [explanation](https://github.com/xemuliam/docker-nifi/blob/1.x/README.Cluster.md).
+Please read [explanation](https://github.com/xemuliam/docker-nifi/blob/main/README.Cluster.md).
 
 
 # Enjoy! :)
