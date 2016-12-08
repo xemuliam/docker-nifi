@@ -34,7 +34,7 @@ All of them are hidden however can be used in `docker-compose`.
 - ZK_MONITOR_PORT - Port for Zookeeper monitoring of NiFi nodes' availability. If empty, following value will be used: 2888
 - ZK_ELECTION_PORT - Port for Zookeeper election of NiFi Cluster Coordinator node. If empty, following value will be used: 3888
 
-Applicable from varsion 1.1.0:
+Since version 1.1.0:
 - ELECTION_TIME - Amount of time which should elapse to determine which of the nodes have the "correct" version of the flow. If empty, following value will be used: 5 mins
 
 
