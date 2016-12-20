@@ -19,6 +19,7 @@ Created from NiFi [base image](https://hub.docker.com/r/xemuliam/nifi-base) to m
 
 DockerHub does not cache image layers while compilation. Thus creation of base image (with pure NiFi) mitigates this issue and let us to experiment/play with NiFi settings w/o downloading full NiFi archive (more than 800MB) each time when we change smth. in configuration (or libs, add-ons, etc.) and recompile docker image. Only our changes will be pulled out from Docker Hub instead of full image.
 
+```
                         ##         .
                   ## ## ##        ==
                ## ## ## ## ##    ===
@@ -27,6 +28,7 @@ DockerHub does not cache image layers while compilation. Thus creation of base i
            \______ o           __/
              \    \         __/
               \____\_______/
+```
 
 *__Please use corresponding branches from this repo to play with code.__*
 
