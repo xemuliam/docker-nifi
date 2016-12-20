@@ -9,7 +9,7 @@
 
 [Docker](https://www.docker.com/what-docker) image for [Apache NiFi](https://nifi.apache.org/).
 
-- ![Docker Pulls](https://img.shields.io/docker/pulls/xemuliam/nifi.svg) ![Docker Stars](https://img.shields.io/docker/stars/xemuliam/nifi.svg)
+- ![Docker builds](https://img.shields.io/docker/automated/xemuliam/nifi.svg) ![Docker Pulls](https://img.shields.io/docker/pulls/xemuliam/nifi.svg) ![Docker Stars](https://img.shields.io/docker/stars/xemuliam/nifi.svg)
  
 Created from NiFi [base image](https://hub.docker.com/r/xemuliam/nifi-base) to minimize traffic and deployment time in case of changes should be applied on top of NiFi
 
