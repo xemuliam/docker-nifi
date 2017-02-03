@@ -1,0 +1,23 @@
+version: '2'
+
+services:
+
+  zookeeper:
+    image: zookeeper
+#    container_name: zookeeper
+    restart: always
+    ports:
+      - 2181
+    environment:
+      ZOO_MY_ID: 1
+      ZOO_SERVERS: server.1=zookeeper:2888:3888
+
+  nifi:
+    image: xemuliam/nifi
+    ports:
+      - 8080
+    environment:
+      IS_CLUSTER_NODE: 1
+      ZK_NODES_LIST: zookeeper
+      ELECTION_TIME: 1 min
+
