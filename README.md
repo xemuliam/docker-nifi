@@ -4,18 +4,18 @@
 # NiFi
 
 ## 1.x
-- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.2.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.2.svg) 1.1.2 = 1.1 = latest
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.2.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.2.svg) __1.1.2 = 1.1 = latest__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.1.svg)
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.0.svg)
-- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.0.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.0.1.svg) 1.0.1 = 1.0
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.0.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.0.1.svg) __1.0.1 = 1.0__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.0.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.0.0.svg)
 
 
 ## 0.x
-- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.2.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.2.svg) 0.7.2 = 0.7
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.2.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.2.svg) __0.7.2 = 0.7__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.1.svg)
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.0.svg)
-- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.6.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.6.1.svg)  0.6.1 = 0.6
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.6.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.6.1.svg)  __0.6.1 = 0.6__
 
 
 [Docker](https://www.docker.com/what-docker) image for [Apache NiFi](https://nifi.apache.org/).
