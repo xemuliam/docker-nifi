@@ -4,7 +4,8 @@
 # NiFi
 
 ## 1.x
-- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.2.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.2.svg) __1.1.2 = 1.1 = latest__
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.2.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.2.0.svg) __1.2.0 = 1.2 = latest__
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.2.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.2.svg) __1.1.2 = 1.1
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.1.svg)
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.0.svg)
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.0.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.0.1.svg) __1.0.1 = 1.0__
