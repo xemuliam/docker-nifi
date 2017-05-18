@@ -13,6 +13,7 @@
 
 
 ## 0.x
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.3.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.3.svg)
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.2.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.2.svg) __0.7.2 = 0.7__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.1.svg)
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:0.7.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:0.7.0.svg)
