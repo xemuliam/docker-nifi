@@ -49,5 +49,9 @@ do_site2site_configure
 
 if [ ! -z "$IS_CLUSTER_NODE" ]; then do_cluster_node_configure; fi
 
+if [ ! -z "$FLOW_CONF_FOLDER_NAME" ]; then
+  sed -i "s/nifi\.flow\.configuration\.file=.*/nifi.flow.configuration.file=.\/conf\/${FLOW_CONF_FOLDER_NAME}\/flow.xml.gz/g" ${NIFI_HOME}/conf/nifi.properties
+fi
+
 tail -F ${NIFI_HOME}/logs/nifi-app.log &
 ${NIFI_HOME}/bin/nifi.sh run
