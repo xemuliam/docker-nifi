@@ -49,5 +49,17 @@ do_site2site_configure
 
 if [ ! -z "$IS_CLUSTER_NODE" ]; then do_cluster_node_configure; fi
 
+if [ ! -z "$FLOW_CONF_FOLDER_NAME" ]; then
+  sed -i "s/nifi\.flow\.configuration\.file=.*/nifi.flow.configuration.file=.\/conf\/${FLOW_CONF_FOLDER_NAME}\/flow.xml.gz/g" ${NIFI_HOME}/conf/nifi.properties
+  sed -i "s/nifi\.database\.directory=.*/nifi.database.directory=.\/conf\/${FLOW_CONF_FOLDER_NAME}\/database_repository/g" ${NIFI_HOME}/conf/nifi.properties
+  sed -i "s/nifi\.content\.repository\.directory\.default=.*/nifi.content.repository.directory.default=.\/conf\/${FLOW_CONF_FOLDER_NAME}\/content_repository/g" ${NIFI_HOME}/conf/nifi.properties
+  sed -i "s/nifi\.provenance\.repository\.directory\.default=.*/nifi.provenance.repository.directory.default=.\/conf\/${FLOW_CONF_FOLDER_NAME}\/provenance_repository/g" ${NIFI_HOME}/conf/nifi.properties
+  sed -i "s/nifi\.flowfile\.repository\.directory=.*/nifi.flowfile.repository.directory=.\/conf\/${FLOW_CONF_FOLDER_NAME}\/flowfile_repository/g" ${NIFI_HOME}/conf/nifi.properties
+  mkdir -p ${NIFI_HOME}/conf/${FLOW_CONF_FOLDER_NAME}/drivers
+  apk update
+  apk add openssl
+  wget https://jdbc.postgresql.org/download/postgresql-42.1.4.jar -O ${NIFI_HOME}/conf/${FLOW_CONF_FOLDER_NAME}/drivers/postgresql-42.1.4.jar
+fi
+
 tail -F ${NIFI_HOME}/logs/nifi-app.log &
 ${NIFI_HOME}/bin/nifi.sh run
