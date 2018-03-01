@@ -88,7 +88,7 @@ All required information can be found [here](http://cwiki.apache.org/confluence/
 - 8443 - NiFi web application secure port
 - 8081 - NiFi ListenHTTP processor port
 
-## ! Important note !
+## !!! Important note !!!
 
 Since version 1.5.0 "http request header check" has been implemented on NiFi side. Thus it breaches native Docker functionality with automatic ports assignment. At the moment NiFi web http port and docker port should be equal.
 
