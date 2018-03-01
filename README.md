@@ -1,10 +1,10 @@
 ![nifi-logo](https://s15.postimg.org/sfsfqg45n/nifi_logo_uni_500.png)
 
-
 # NiFi
 
 ## 1.x
-- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.4.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.4.0.svg) __1.4.0 = 1.4 = latest__
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.5.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.5.0.svg) __1.5.0 = 1.5 = latest__
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.4.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.4.0.svg) __1.4.0 = 1.4__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.3.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.3.0.svg) __1.3.0 = 1.3__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.2.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.2.0.svg) __1.2.0 = 1.2__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.1.2.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.1.2.svg) __1.1.2 = 1.1__
@@ -88,6 +88,22 @@ All required information can be found [here](http://cwiki.apache.org/confluence/
 - 8443 - NiFi web application secure port
 - 8081 - NiFi ListenHTTP processor port
 
+## ! Important note !
+
+Since version 1.5.0 "http request header check" has been implemented on NiFi side. Thus it breaches native Docker functionality with automatic ports assignment. At the moment NiFi web http port and docker port should be equal.
+
+So you can use dockerized NiFi in two ways:
+
+1. Use static Docker port (8080) which equal to default NiFi web http port
+```
+docker run -d -p 8080:8080 xemuliam/nifi
+```
+
+2. Use NIFI_WEB_HTTP_PORT environment variable with value which is equal to Docker port
+(mentioned environment variable let NiFi to be ran at specified web http port): 
+```
+docker run -d -p 9999:9999 -e NIFI_WEB_HTTP_PORT=9999 xemuliam/nifi
+``` 
 
 ## Volumes
 
