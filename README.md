@@ -6,7 +6,7 @@ Since version 1.5.0 you can use [NiFi Registry](https://hub.docker.com/r/xemulia
 
 ## 1.x
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.6.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.6.0.svg) __1.6.0 = 1.6 = latest__
-- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.5.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.5.0.svg) __1.5.0 = 1.5 = latest__
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.5.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.5.0.svg) __1.5.0 = 1.5__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.4.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.4.0.svg) __1.4.0 = 1.4__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.3.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.3.0.svg) __1.3.0 = 1.3__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.2.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.2.0.svg) __1.2.0 = 1.2__
