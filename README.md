@@ -5,6 +5,7 @@
 Since version 1.5.0 you can use [NiFi Registry](https://hub.docker.com/r/xemuliam/nifi-registry/) service to maintain flow versions.
 
 ## 1.x
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.6.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.6.0.svg) __1.6.0 = 1.6 = latest__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.5.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.5.0.svg) __1.5.0 = 1.5 = latest__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.4.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.4.0.svg) __1.4.0 = 1.4__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.3.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.3.0.svg) __1.3.0 = 1.3__
@@ -92,9 +93,9 @@ All required information can be found [here](http://cwiki.apache.org/confluence/
 
 ## !!! Important note !!!
 
-Since version 1.5.0 "http request header check" has been implemented on NiFi side. Thus it breaches native Docker functionality with automatic ports assignment. At the moment NiFi web http port and docker port should be equal.
+In version 1.5.0 "http request header check" has been implemented on NiFi side. Thus it breaches native Docker functionality with automatic ports assignment. At the moment NiFi web http port and docker port should be equal.
 
-So you can use dockerized NiFi in two ways:
+So you can use dockerized NiFi 1.5 in two ways:
 
 1. Use static Docker port (8080) which equal to default NiFi web http port
 ```
