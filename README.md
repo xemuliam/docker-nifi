@@ -1,4 +1,4 @@
-![nifi-logo](https://s15.postimg.org/sfsfqg45n/nifi_logo_uni_500.png)
+![nifi-logo](https://i.imgur.com/rw8ednM.png)
 
 # NiFi
 
