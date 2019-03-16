@@ -5,7 +5,8 @@
 Since version 1.5.0 you can use [NiFi Registry](https://hub.docker.com/r/xemuliam/nifi-registry/) service to maintain flow versions.
 
 ## 1.x
-- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.8.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.8.0.svg) __1.8.0 = 1.8 = latest__
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.9.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.9.0.svg) __1.9.0 = 1.9 = latest__
+- ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.8.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.8.0.svg) __1.8.0 = 1.8__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.7.1.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.7.1.svg) __1.7.1 = 1.7__
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.7.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.7.0.svg)
 - ![Version](https://images.microbadger.com/badges/version/xemuliam/nifi:1.6.0.svg) ![Layers](https://images.microbadger.com/badges/image/xemuliam/nifi:1.6.0.svg) __1.6.0 = 1.6__
